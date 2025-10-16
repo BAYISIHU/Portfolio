@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>80</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">我是第一个div</div>
+  <div>我是第2个div</div>
+  <p id="nav">我是p</p>
+  <ul class="nav">
+    <li>
+      测试1
+    </li>
+    <li>
+      测试2
+    </li>
+    <li>
+      测试3
+    </li>
+  </ul>
+  <script>
+    const box = document.querySelector(`.box`)
+    // console.log(box.innerText);
+    // box.innerText = `<strong>我是一个盒子</strong>` 
+    //  //innerText不识别里边的标签,strong没效果
+    console.log(box.innerHTML);
+    box.innerHTML = `我是一个<strong>盒子</strong>`
+    //识别标签
+
+  </script>
+
+</body>
+
+</html>

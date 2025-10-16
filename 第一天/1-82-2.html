@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>80</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+    }
+  </style>
+</head>
+
+<body>
+  <img src="./images/1.webp" alt=""></src>
+  <script>
+    function getRandom(N, M) {
+      return Math.floor(Math.random() * (M - N - 1) + N)
+    }
+    //1.获取图片
+    const img = document.querySelector(`img`)
+    //2.随机得到序号
+    const random = getRandom(1, 6)
+    // 3.更换路径 
+    img.src = `./images/${random}.webp`
+  </script>
+
+</body>
+
+</html>

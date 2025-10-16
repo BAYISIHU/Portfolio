@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1-82-3</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+  <script>
+    const box = document.querySelector(`.box`)
+    //修改样式属性
+    box.style.width = '300px'   //要写单位
+    box.style.backgroundColor = `hotpink`  //小驼峰命名法
+    box.style.border = `2px solid blue`
+    box.style.borderTop = `2px solid red`
+  </script>
+
+</body>
+
+</html>
