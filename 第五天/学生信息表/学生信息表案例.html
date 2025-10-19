@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>学生信息管理</title>
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+
+<body>
+  <h1>新增学员</h1>
+  <form class="info" autocomplete="off">
+    姓名：<input type="text" class="uname" name="uname" />
+    年龄：<input type="text" class="age" name="age" />
+    性别:
+    <select name="gender" class="gender">
+      <option value="男">男</option>
+      <option value="女">女</option>
+    </select>
+    薪资：<input type="text" class="salary" name="salary" />
+    就业城市：<select name="city" class="city">
+      <option value="北京">北京</option>
+      <option value="上海">上海</option>
+      <option value="广州">广州</option>
+      <option value="深圳">深圳</option>
+      <option value="曹县">曹县</option>
+    </select>
+    <button class="add">录入</button>
+  </form>
+
+  <h1>就业榜
+    <span class="count">(共0人)</span>
+  </h1>
+  <table>
+    <thead>
+      <tr>
+        <th>学号</th>
+        <th>姓名</th>
+        <th>年龄</th>
+        <th>性别</th>
+        <th>薪资</th>
+        <th>就业城市</th>
+        <th>操作</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+  </table>
+  <script>
+    // --- 1. 数据准备 ---
+    const initData = [
+      {
+        stuId: 1001,
+        uname: '欧阳霸8',
+        age: 19,
+        gender: '男',
+        salary: '20000',
+        city: '上海',
+      }
+    ]
+
+    // 【修复】只有在 localStorage 为空时，才存入初始数据
+    if (!localStorage.getItem('data')) {
+      localStorage.setItem('data', JSON.stringify(initData))
+    }
+
+    // 读取本地存储的数据
+    const arr = JSON.parse(localStorage.getItem('data')) || []
+    console.log(arr);
+
+    // --- 2. 获取 DOM 元素 ---
+    const tbody = document.querySelector('tbody')
+    const countSpan = document.querySelector('.count')
+    const infoForm = document.querySelector('.info')
+    const unameInput = document.querySelector('.uname')
+    const ageInput = document.querySelector('.age')
+    const genderSelect = document.querySelector('.gender') // 获取下拉菜单
+    const salaryInput = document.querySelector('.salary')
+    const citySelect = document.querySelector('.city') // 获取下拉菜单
+
+    // --- 3. 渲染函数 ---
+    function render() {
+      // 利用map遍历数组,返回对应tr的数组
+      const trArr = arr.map(function (ele) {
+        // 【修复】移除了不存在的 ele.time
+        // 【补全】为删除链接添加 data-id，方便后续删除
+        return `
+              <tr>
+                <td>${ele.stuId}</td>
+                <td>${ele.uname}</td>
+                <td>${ele.age}</td>
+                <td>${ele.gender}</td>
+                <td>${ele.salary}</td>
+                <td>${ele.city}</td>
+                <td>
+                  <a href="javascript:" data-id="${ele.stuId}">删除</a>
+                </td>
+              </tr>
+        `
+      })
+
+      // 把数组转换为字符串,追加给tbody
+      tbody.innerHTML = trArr.join('')
+      // 【实现功能】更新学员总数
+      countSpan.innerHTML = `(共 ${arr.length} 人)`
+    }
+
+    // 【修复】页面加载时，必须调用一次 render() 才能显示数据
+    render()
+
+    // 【修复】删除了你指出的那行错误代码
+    // document.querySelector(`.title span`).innerHTML = arr.length
+
+    // --- 4. 辅助函数：保存并重新渲染 ---
+    function saveAndRender() {
+      localStorage.setItem('data', JSON.stringify(arr))
+      render()
+    }
+
+    // --- 5. 新增学员功能 ---
+    infoForm.addEventListener('submit', function (e) {
+      e.preventDefault()
+
+      // 【修复】使用正确的变量名 (unameInput, ageInput, salaryInput)
+      const uname = unameInput.value
+      const age = ageInput.value
+      const salary = salaryInput.value
+
+      // 非空判断
+      if (!uname || !age || !salary) {
+        return alert('姓名、年龄和薪资不能为空')
+      }
+
+      // 【补全】创建新学员对象
+      const newStu = {
+        stuId: Date.now(), // 用时间戳作为唯一ID
+        uname: uname,
+        age: age,
+        gender: genderSelect.value, // 从下拉菜单获取
+        salary: salary,
+        city: citySelect.value // 从下拉菜单获取
+      }
+
+      // 【补全】添加到数组
+      arr.push(newStu)
+
+      // 【补全】保存并重新渲染
+      saveAndRender()
+
+      // 【补全】重置表单
+      infoForm.reset()
+    })
+
+    // --- 6. 删除学员功能 (事件委托) ---
+    // 【补全】添加删除功能
+    tbody.addEventListener('click', function (e) {
+      // 检查点击的是否是 'A' 标签（删除链接）
+      if (e.target.tagName === 'A') {
+        if (confirm('你确定要删除这条记录吗？')) {
+          // 获取 data-id 属性值
+          const id = +e.target.dataset.id // +号转为数字
+
+          // 查找索引
+          const index = arr.findIndex(ele => ele.stuId === id)
+
+          // 从数组中删除
+          if (index !== -1) {
+            arr.splice(index, 1)
+          }
+
+          // 保存并重新渲染
+          saveAndRender()
+        }
+      }
+    })
+
+  </script>
+
+</body>
+
+</html>
