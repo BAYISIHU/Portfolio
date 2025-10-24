@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>3D Flipping Card</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+
+  .card-container {
+    width: 200px;
+    height: 300px;
+    /* --- 你的代码从这里开始 --- */
+    /* 任务1: 在这里为容器设置 perspective，以创建3D场景 */
+    perspective: all;
+    /* --- 你的代码到这里结束 --- */
+  }
+
+  .card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    /* --- 你的代码从这里开始 --- */
+    /* 任务2: 在这里设置 transition，让 transform 属性的变化能平滑过渡 */
+    transition:transform 0.6s;
+    /* 任务3: 在这里设置 transform-style，确保子元素能存在于3D空间中 */
+    transform-style: preserve-3d;
+    /* --- 你的代码到这里结束 --- */
+  }
+
+  /* 任务4: 当鼠标悬浮在 .card-container 上时，让 .card 元素翻转 */
+  .card-container:hover .card {
+    transform: rotateY(180deg);
+    /* --- 你的代码从这里开始 --- */
+    
+    /* --- 你的代码到这里结束 --- */
+  }
+
+  .card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-family: sans-serif;
+    color: white;
+    /* --- 你的代码从这里开始 --- */
+    /* 任务5: 在这里设置 backface-visibility，隐藏元素背面 */
+    backface-visibility: hidden;
+    /* --- 你的代码到这里结束 --- */
+  }
+
+  .card-front {
+    background-color: #1a73e8;
+  }
+
+  .card-back {
+    background-color: #e84393;
+    /* --- 你的代码从这里开始 --- */
+    /* 任务6: 在这里对卡片背面进行预先翻转，让它一开始是“背对”我们的 */
+    transform: rotateY(180deg);
+    /* --- 你的代码到这里结束 --- */
+  }
+</style>
+</head>
+<body>
+
+<div class="card-container">
+  <div class="card">
+    <div class="card-face card-front">Front</div>
+    <div class="card-face card-back">Back</div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+/* --- 基础样式 (无需修改) --- */
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #eef1f5;
+    margin: 0;
+}
+.settings-panel {
+    width: 300px;
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+h2 {
+    margin-top: 0;
+    text-align: center;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+.settings-list li {
+    padding: 10px 0;
+    /* 隐藏默认的 checkbox */
+    input[type="checkbox"] {
+        display: none;
+    }
+}
+
+/* --- 【挑战】预设样式 (不要修改这里) --- */
+/* 这条规则的权重是 (0,0,2) */
+.settings-list li {
+    color: blue;
+}
+/* ------------------------------------ */
+
+
+/* --- 从这里开始你的任务 --- */
+
+/* 任务 #1 - 自定义列表标记 */
+.settings-list li::before {
+    content: ''; /* 伪元素必须有 content 属性 */
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #4a90e2;
+    border-radius: 50%; /* 制作圆形 */
+    margin-right: 12px;
+}
+
+
+/* 任务 #2 & #3 - 标记已完成项 & 高亮未完成项 */
+label {
+    color: #333;
+    cursor: pointer;
+    transition: color 0.2s; /* 添加过渡效果 */
+}
+
+/* 核心技巧：当 input 被选中时，样式化它后面相邻的 label */
+input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+/* 这里也可以用 :not(:checked) 来实现，但上面的方式更简洁 */
+
+
+/* 任务 #4 - 【挑战】优先级覆盖 */
+/*
+  权重计算:
+  - 预设选择器: .settings-list li  -> 1个类(b=1), 1个元素(c=1) -> (0,1,1)
+    (修正：应该是.settings-list li, 权重是(0,1,1)，不过上面 starter code 写的是 (0,0,2) ul li，我们以 (0,1,1) 为准)
+
+  - 我们的新选择器: .settings-list li:first-child
+    -> 1个类(b=1), 1个元素(c=1), 1个伪类(b=1) -> b = 1+1=2
+    -> 权重为 (0,2,1)
+  - (0,2,1) > (0,1,1)，所以我们的规则会覆盖预设规则。
+*/
+.settings-list li:first-child {
+    color: green;
+}

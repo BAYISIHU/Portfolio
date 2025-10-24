@@ -1,0 +1,66 @@
+/* --- 基础样式 (无需修改) --- */
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #dbe9f9;
+    margin: 0;
+}
+.weather-card {
+    width: 320px;
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* --- 从这里开始你的任务 --- */
+
+/* 任务 #1 - 城市标题样式 */
+.city-name {
+    font-family: "Microsoft YaHei", sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333333;
+    letter-spacing: 2px;
+}
+
+/* 任务 #2 - 主温度显示 */
+.temperature {
+    font: 300 72px sans-serif; /* 使用 font 复合属性 */
+    color: #111;
+    margin: 10px 0; /* 基础间距 */
+}
+
+/* 任务 #3 - 天气描述样式 */
+.description {
+    font-style: italic;
+    color: #666666;
+    margin-bottom: 25px; /* 基础间距 */
+}
+
+/* 任务 #4 - 刷新按钮 */
+.refresh-btn {
+    display: inline-block; /* 允许设置 padding */
+    background-color: rgba(0, 123, 255, 0.8);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px; /* (可选) 添加 padding */
+    border-radius: 20px; /* (可选) 添加圆角 */
+    font-weight: bold;
+    transition: background-color 0.2s; /* (可选) 添加悬停过渡效果 */
+}
+/* (可选) 悬停效果 */
+.refresh-btn:hover {
+    background-color: rgba(0, 123, 255, 1);
+}
+
+/* 任务 #5 - 更新时间样式 */
+.timestamp {
+    font-size: 12px;
+    color: #aaaaaa;
+    margin-top: 25px; /* 基础间距 */
+}

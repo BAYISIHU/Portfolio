@@ -1,0 +1,87 @@
+/* --- 基础样式 (无需修改) --- */
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    margin: 0;
+}
+
+.forecast-container {
+    width: 350px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* 确保 padding 不会撑大宽度 */
+    margin-bottom: 20px;
+    transition: all 0.2s ease-in-out; /* 为 focus 效果添加过渡 */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    transition: all 0.2s ease-in-out; /* 为交互效果添加平滑过渡 */
+}
+
+/* --- 从这里开始你的任务 --- */
+
+/* 任务 #1 - 输入框交互 */
+.search-input:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.25);
+}
+
+
+/* 任务 #2 - 列表隔行变色 */
+.forecast-list li:nth-child(even) {
+    background-color: #f7f7f7;
+}
+
+
+/* 任务 #3 - 突出首末两天 */
+.forecast-list li:first-child .day {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.forecast-list li:last-child .day {
+    color: #fd7e14;
+    font-weight: bold;
+}
+
+
+/* 任务 #4 - 特定日期高亮 */
+/* 这里用 :nth-child(3) 也可以，因为 li 是 ul 下唯一的元素类型 */
+.forecast-list li:nth-of-type(3) .temp-high {
+    color: red;
+    font-weight: bold;
+}
+
+
+/* 任务 #5 - 高级交互效果 */
+.forecast-list li:hover {
+    background-color: #e9f5ff;
+}
+
+.forecast-list li:hover ~ li {
+    opacity: 0.5;
+}

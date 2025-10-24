@@ -1,0 +1,86 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    font-family: sans-serif;
+}
+
+/* 卡片容器，也是 3D 效果的舞台 */
+.card-container {
+    width: 300px;
+    height: 400px;
+    /* TODO 1: 在这里为容器设置 perspective 属性，创建 3D 舞台。
+       提示：一个合适的 perspective 值通常是元素宽度的 2-3 倍。*/
+    transform-style:preserve-3d;
+       perspective: 150px;
+}
+
+/* 内部容器，这是实际执行翻转的元素 */
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: all;
+    transition: transform 0.6s;
+    /* TODO 2: 在这里添加 transition 效果，让翻转变得平滑。
+       提示：过渡效果应该应用在 transform 属性上，持续时间建议 0.6s 左右。*/
+    transform-style:preserve-3d;
+    /* TODO 3: 在这里应用 transform-style 属性，确保子元素（正面和背面）
+       能存在于一个共享的 3D 空间中。*/
+}
+
+/* TODO 4: 当鼠标悬停在 .card-container 上时，翻转 .card-inner。
+   提示：使用 :hover 伪类和 transform 的 rotateY() 函数。*/
+.card-container:hover .card-inner {
+transform: rotateY(180deg);
+}
+
+
+/* 正面和背面的通用样式 */
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    
+    /* TODO 5: 在这里设置元素的背面不可见，这是实现翻转效果的关键！*/
+    backface-visibility: hidden;
+}
+
+/* 正面 spécifique 样式 */
+.card-front {
+    background: linear-gradient(45deg, #ff6b6b, #f06595);
+}
+
+/* 背面 spécifique 样式 */
+.card-back {
+    background: linear-gradient(45deg, #5c7cfa, #3d5af1);
+    /* TODO 6: 默认情况下，背面需要预先翻转 180 度，使其背对我们。*/
+    transform: rotateY(180deg);
+}
+
+.card-back h3 {
+    margin-bottom: 20px;
+}
+
+.card-back ul {
+    list-style: none;
+    padding: 0;
+}
+
+.card-back ul li {
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 5px 0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+}

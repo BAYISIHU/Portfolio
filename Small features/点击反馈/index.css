@@ -1,0 +1,23 @@
+/* --- 标准答案 --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-items {
+    display: flex;
+    gap: 10px; /* 设置项目间距的现代方法 */
+    flex-wrap: wrap; /* 允许换行 */
+    justify-content: flex-end; /* 换行后也保持靠右 */
+}
+.nav-items li {
+    flex-shrink: 2; /* 所有项默认收缩因子为2 */
+}
+.nav-items .contact {
+    flex-shrink: 1; /* “联系我们”收缩得更慢 */
+}
+/* a 标签样式美化 (可选) */
+.nav-items li a {
+    color: white;
+    text-decoration: none;
+}

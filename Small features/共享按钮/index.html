@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>分享按钮动画</title>
+<style>
+    /* 基础样式 (无需修改) */
+    body {
+        background-color: #f0f2f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: sans-serif;
+    }
+    .share-button-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+    .share-button {
+        width: 60px;
+        height: 60px;
+        background-color: #007bff;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 2; /* 让按钮在标签上方 */
+    }
+    .tooltip {
+        position: absolute;
+        left: 50px; /* 初始定位 */
+        background-color: #343a40;
+        color: white;
+        padding: 5px 12px;
+        border-radius: 4px;
+        font-size: 14px;
+        white-space: nowrap;
+        z-index: 1;
+    }
+.share-button{
+    transition: all 0.3s ease;
+
+}
+.tooltip{
+    transition: all 0.3s ease;
+    opacity:0.1;
+    transform: translateX(-10px)
+}
+.share-button-wrapper:hover .share-button{transform: scale(1.2) rotate(45deg);}
+.share-button-wrapper:hover .tooltip{opacity:1;transform: translateX(10px);}
+    /* --- 你的代码写在这里 --- */
+    /* 提示: 你需要为 .share-button 和 .tooltip 添加 transition 属性 */
+    /* 以及为 .tooltip 设置初始隐藏状态 */
+    /* 最后，编写 .share-button-wrapper:hover 状态下的样式 */
+
+
+</style>
+</head>
+<body>
+
+<div class="share-button-wrapper">
+    <div class="share-button">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
+            <polyline points="16 6 12 2 8 6"></polyline>
+            <line x1="12" y1="2" x2="12" y2="15"></line>
+        </svg>
+    </div>
+    <div class="tooltip">点击分享</div>
+</div>
+
+</body>
+</html>

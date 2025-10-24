@@ -1,0 +1,55 @@
+/* --- 基础样式 (无需修改) --- */
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f4f8;
+    margin: 0;
+}
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* --- 从这里开始你的任务 --- */
+
+/* 任务 #1 - 全局 box-sizing */
+* {
+    box-sizing: border-box;
+}
+
+/* 任务 #2 & #3 - 面板容器与外边距折叠修复 */
+.stats-panel {
+    width: 300px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px; /* 美化一下 */
+    
+    /* 修复方案: 创建一个新的块级格式化上下文 (BFC) 来包裹住子元素的 margin。
+      overflow: hidden; 是最简单的创建 BFC 的方式之一。
+      其他方式如 `display: flow-root;`, `border-top: 1px solid transparent;` 也可以。
+    */
+    overflow: hidden; 
+}
+
+/* 任务 #3 的一部分 - 设置标题外边距 */
+.stats-panel h3 {
+    margin: 0; /* 先重置一下默认的 margin */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center; /* 美化一下 */
+}
+
+/* 任务 #4 & #5 - 统计项样式与观察兄弟外边距折叠 */
+.stat-item {
+    padding: 15px 0; /* 上下 15px, 左右 0 */
+    margin-top: 15px; /* 设置上外边距 */
+}
+
+/* 使用 :not() 伪类为除了最后一个之外的所有 .stat-item 添加下边框 */
+.stat-item:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
