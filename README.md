@@ -1,4 +1,4 @@
-# 🌟 项目名称 / Project Title / プロジェクト名
+# 🌟 BAYISIHU 作品集 / Portfolio / ポートフォリオ
 
 > 这是我的作品集,内容持续更新中,更新日期2025年10月24日15:21:59
 > A brief, catchy slogan or one-sentence description of the project.
@@ -16,39 +16,22 @@
 
 ## 🇨🇳 简体中文
 
-### 🚀 项目简介
-本作品集包含
-  大项目[天气小程序,ShoppingNetwork_rabbit,ShoppingNetwork_home]
-  中项目[报名信息,Student Information Form,ShoppingNetwork_buy,Learning Website,Agree to the Agreement]
-  小项目[Small features,Slideshow_timer,Automatically closing ads,accordion]
-  新项目[]
-  小兔子购物网站包含 [新用户注册网页],[账号登录界面],和[实际产品界面购买界面]
-  [新用户注册网页]
-  ### ✨ 主要功能
-  * **功能 A：**可实现:输入内容合法检验,
-  * **功能 B：**密码不一致无法验证,
-  * **功能 C：**验证码设置有定时器,防止同时多次获取
-  * **功能 D：**提交前判断是否勾选用户协议
-  [账号登录界面]
-  * **功能 A：**可实现记录用户名到本地,跳转首页
+### 🚀 作品集概览 (Portfolio Overview)
 
-  [实际产品界面购买界面]
-  * **功能 A：**可实现放大镜效果
-  [天气小程序]
-包含以下5个小项目
-    [单日详细数据][七日天气详细][设置天气][台风动态][天气详细]
-    
-  * **功能 A：**
-  * **功能 B：**
+本作品集主要展示我在 [前端 / Web 开发] 领域的技术实践，内容持续迭代更新中。
 
+| 分类 | 项目名称 | 主要技术栈 / 亮点 | 仓库链接 |
+| :--- | :--- | :--- | :--- |
+| **大型项目** | **[WeatherApplet]** | 微信小程序 API 调用，实现 7 日天气、台风动态等。 | [🔗 仓库](https://github.com/BAYISIHU/API/tree/main/WeatherApplet) \| [👁️‍🗨️ Demo (如有)] |
+| | **[ShoppingNetwork_rabbit]** | 注册/登录流程、产品购买、**放大镜效果**、表单验证。 | [🔗 仓库](https://github.com/BAYISIHU/API/tree/main/ShoppingNetwork_rabbit) \| [👁️‍🗨️ Demo (https://bayisihu.github.io/API/ShoppingNetwork_rabbit/index.html)] |
+| **中型项目** | **[RegistrationInformation]** | 复杂的表单输入合法性检验、定时器验证码、用户协议勾选。 | [🔗 仓库](https://github.com/BAYISIHU/API/tree/main/报名信息) \| [👁️‍🗨️ Demo (如有)] |
+| | **[Student Information Form]** | ... (根据实际内容简述亮点) | [🔗 仓库](https://github.com/BAYISIHU/API/tree/main/Student%20Information%20Form) \| [👁️‍🗨️ Demo (如有)] |
+| **小型练习** | **[Small features]** | 各种 JS/CSS 实用技巧：轮播图、手风琴菜单、广告自动关闭。 | [🔗 仓库](https://github.com/BAYISIHU/API/tree/main/Small%20features) \| [👁️‍🗨️ Demo (如有)] |
+| | **[Accordion] / [Slideshow_timer]** | ... | [🔗 仓库](...) \| [👁️‍🗨️ Demo (如有)] |
 
 ### 🛠️ 技术栈
 
-* **前端：** [React / Vue / ...]
-* **后端：** [Node.js / Python (Flask) / ...]
-* **数据库：** [MySQL / MongoDB / ...]
-
-### 💡 快速开始
+* **前端：** [HTML5, CSS3, JavaScript (ES6+),API]
 
 #### 1. 环境要求
 
@@ -61,7 +44,7 @@
 
 1.  **克隆仓库：**
     ```bash
-    git clone [https://github.com/你的用户名/你的仓库名.git](https://github.com/你的用户名/你的仓库名.git)
+    git clone [git clone https://github.com/BAYISIHU/API.git]
     cd 你的仓库名
     ```
 
@@ -79,14 +62,14 @@
 
 ### 📄 许可证
 
-本项目采用 **[许可证名称，例如 MIT]** 许可证。详情请参阅 [LICENSE](LICENSE) 文件。
+本项目采用 **[MIT许可证]** 许可证。详情请参阅 [LICENSE](LICENSE) 文件。
 
 ### 📬 联系我
 
-👤 **[你的名字/昵称]**
+👤 **[胡巴依思]**
 
-* **GitHub:** [@你的GitHub用户名](https://github.com/你的GitHub用户名)
-* **Email:** your_email@example.com
+* **GitHub:** [BAYISIHU](https://github.com/BAYISIHU)
+* **Email:** hubayisi@gmail.com
 
 ---
 ---
