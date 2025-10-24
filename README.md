@@ -29,14 +29,16 @@
 | :--- | :--- | :--- | :--- |
 | **大規模プロジェクト** | **[WeatherApplet]** | WeChatミニプログラムAPI呼出、7日間天気予報、台風情報など。 | [🔗 倉庫](https://github.com/BAYISIHU/API/tree/main/WeatherApplet) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/API/WeatherApplet/WeatherWeek/index.html) |
 | | **[ShoppingNetwork_rabbit]** | 登録/ログイン、商品購入、**虫眼鏡効果**、フォーム検証。 | [🔗 倉庫](https://github.com/BAYISIHU/API/tree/main/ShoppingNetwork_rabbit) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/API/ShoppingNetwork_rabbit/index.html) |
-| **中規模プロジェクト** | **[RegistrationInformation]** | 複雑なフォーム入力検証、タイマー式認証コード、利用規約チェック。 | [🔗 倉庫](https://github.com/BAYISIHU/API/tree/main/报名信息) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/API/报名信息/) |
-| | **[Student Information Form]** | 学生情報の登録、変更、削除などのCRUD操作。 | [🔗 倉庫](https://github.com/BAYISIHU/API/tree/main/Student%20Information%20Form) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/API/Student%20Information%20Form/Student%20Information%20Form.html) |
-| **小規模な練習** | **[Small features]** | JS/CSS実用テクニック：カルーセル、アコーディオン、広告自動閉鎖。 | [🔗 倉庫](https://github.com/BAYISIHU/API/tree/main/Small%20features) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/API/SmallFeatures/) |
-| | **[Accordion / Slideshow]** | アコーディオンメニューとタイマー式スライドショーの実装。 | [🔗 倉庫](https://github.com/BAYISIHU/API/tree/main/Small%20features) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/API/SlideshowTimer/) |
+| **中規模プロジェクト** | **[RegistrationInformation]** | 複雑なフォーム入力検証、タイマー式認証コード、利用規約チェック。 | [🔗 倉庫](https://github.com/BAYISIHU/API/tree/main/RegistrationInformation) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/API/RegistrationInformation/index.html
+) |
+| | **[Student Information Form]** | 学生情報の登録、変更、削除などのCRUD操作。 | [🔗 倉庫](https://github.com/BAYISIHU/API/tree/main/StudentInformationForm) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/API/StudentInformationForm/StudentInformationForm.html
+) |
+| **小規模な練習** | **[Small features]** | JS/CSS実用テクニック：カルーセル、アコーディオン、広告自動閉鎖。 | [🔗 倉庫](https://github.com/BAYISIHU/API/tree/main/SmallFeatures) \| [👁️‍🗨️ Demo]()
+| | **[Accordion / Slideshow]** | アコーディオンメニューとタイマー式スライドショーの実装。 | [🔗 倉庫](https://github.com/BAYISIHU/API/tree/main/SlideshowTimer) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/API/SlideshowTimer/) |
 
 ### 🛠️ 技術スタック
 
-* **フロントエンド：** HTML5, CSS3, JavaScript (ES6+), API
+* **フロントエンド：** HTML5, CSS3, JavaScript (ES6+)
 
 ### 📂 実行方法
 
@@ -78,7 +80,7 @@ This portfolio showcases my technical practices primarily in the field of Front-
 | :--- | :--- | :--- | :--- |
 | **Large Project** | **[WeatherApplet]** | WeChat Mini-Program API calls, 7-day forecast, typhoon tracking. | [🔗 Repo](https://github.com/BAYISIHU/API/tree/main/WeatherApplet) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/API/WeatherApplet/WeatherWeek/index.html) |
 | | **[ShoppingNetwork_rabbit]** | Registration/login flow, product purchasing, **magnifying glass effect**, form validation. | [🔗 Repo](https://github.com/BAYISIHU/API/tree/main/ShoppingNetwork_rabbit) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/API/ShoppingNetwork_rabbit/index.html) |
-| **Medium Project** | **[RegistrationInformation]** | Complex form input validation, timer-based verification code, user agreement checkbox. | [🔗 Repo](https://github.com/BAYISIHU/API/tree/main/报名信息) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/API/报名信息/) |
+| **Medium Project** | **[RegistrationInformation]** | Complex form input validation, timer-based verification code, user agreement checkbox. | [🔗 Repo](https://github.com/BAYISIHU/API/tree/main/RegistrationInformation) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/API/RegistrationInformation/index.html) |
 | | **[Student Information Form]** | CRUD operations for student information (Create, Read, Update, Delete). | [🔗 Repo](https://github.com/BAYISIHU/API/tree/main/Student%20Information%20Form) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/API/Student%20Information%20Form/Student%20Information%20Form.html) |
 | **Small Features** | **[Small features]** | Various JS/CSS utilities: carousel, accordion menu, auto-closing ads. | [🔗 Repo](https://github.com/BAYISIHU/API/tree/main/Small%20features) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/API/SmallFeatures/) |
 | | **[Accordion / Slideshow]** | Implementation of an accordion menu and a timed image slideshow. | [🔗 Repo](https://github.com/BAYISIHU/API/tree/main/Small%20features) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/API/SlideshowTimer/) |
