@@ -27,14 +27,14 @@
 
 | 分類 | プロジェクト名 | 主要技術 / 特徴 | リポジトリ |
 | :--- | :--- | :--- | :--- |
-| **大規模プロジェクト** | **[WeatherApplet]** | WeChatミニプログラムAPI呼出、7日間天気予報、台風情報など。 | [🔗 倉庫](https://github.com/BAYISIHU/API/tree/main/WeatherApplet) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/API/WeatherApplet/WeatherWeek/index.html) |
-| | **[ShoppingNetwork_rabbit]** | 登録/ログイン、商品購入、**虫眼鏡効果**、フォーム検証。 | [🔗 倉庫](https://github.com/BAYISIHU/API/tree/main/ShoppingNetwork_rabbit) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/API/ShoppingNetwork_rabbit/index.html) |
-| **中規模プロジェクト** | **[RegistrationInformation]** | 複雑なフォーム入力検証、タイマー式認証コード、利用規約チェック。 | [🔗 倉庫](https://github.com/BAYISIHU/API/tree/main/RegistrationInformation) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/API/RegistrationInformation/index.html
+| **大規模プロジェクト** | **[WeatherApplet]** | WeChatミニプログラムAPI呼出、7日間天気予報、台風情報など。 | [🔗 倉庫](https://github.com/BAYISIHU/Portfolio/tree/main/WeatherApplet) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/Portfolio/WeatherApplet/WeatherWeek/index.html) |
+| | **[ShoppingNetwork_rabbit]** | 登録/ログイン、商品購入、**虫眼鏡効果**、フォーム検証。 | [🔗 倉庫](https://github.com/BAYISIHU/Portfolio/tree/main/ShoppingNetwork_rabbit) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/Portfolio/ShoppingNetwork_rabbit/index.html) |
+| **中規模プロジェクト** | **[RegistrationInformation]** | 複雑なフォーム入力検証、タイマー式認証コード、利用規約チェック。 | [🔗 倉庫](https://github.com/BAYISIHU/Portfolio/tree/main/RegistrationInformation) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/Portfolio/RegistrationInformation/index.html
 ) |
-| | **[Student Information Form]** | 学生情報の登録、変更、削除などのCRUD操作。 | [🔗 倉庫](https://github.com/BAYISIHU/API/tree/main/StudentInformationForm) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/API/StudentInformationForm/StudentInformationForm.html
+| | **[Student Information Form]** | 学生情報の登録、変更、削除などのCRUD操作。 | [🔗 倉庫](https://github.com/BAYISIHU/Portfolio/tree/main/StudentInformationForm) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/Portfolio/StudentInformationForm/StudentInformationForm.html
 ) |
-| **小規模な練習** | **[Small features]** | JS/CSS実用テクニック：カルーセル、アコーディオン、広告自動閉鎖。 | [🔗 倉庫](https://github.com/BAYISIHU/API/tree/main/SmallFeatures) \| [👁️‍🗨️ Demo]()
-| | **[Accordion / Slideshow]** | アコーディオンメニューとタイマー式スライドショーの実装。 | [🔗 倉庫](https://github.com/BAYISIHU/API/tree/main/SlideshowTimer) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/API/SlideshowTimer/) |
+| **小規模な練習** | **[Small features]** | JS/CSS実用テクニック：カルーセル、アコーディオン、広告自動閉鎖。 | [🔗 倉庫](https://github.com/BAYISIHU/Portfolio/tree/main/SmallFeatures) \| [👁️‍🗨️ Demo]()
+| | **[Accordion / Slideshow]** | アコーディオンメニューとタイマー式スライドショーの実装。 | [🔗 倉庫](https://github.com/BAYISIHU/Portfolio/tree/main/SlideshowTimer) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/Portfolio/SlideshowTimer/) |
 
 ### 🛠️ 技術スタック
 
