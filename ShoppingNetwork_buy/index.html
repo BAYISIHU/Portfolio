@@ -25,13 +25,13 @@
       border: 1px solid #ddd;
       border-bottom: 0;
       height: 36px;
-      width: 320px;
+      width: 550px;
     }
 
     .tab li {
       position: relative;
       float: left;
-      width: 80px;
+      width: 120px;
       height: 34px;
       line-height: 34px;
       text-align: center;
@@ -74,10 +74,12 @@
 <body>
   <div class="wrapper">
     <ul class="tab">
-      <li class="tab-item active">国际大牌<span>◆</span></li>
-      <li class="tab-item">国妆名牌<span>◆</span></li>
-      <li class="tab-item">清洁用品<span>◆</span></li>
-      <li class="tab-item">男士精品</li>
+      <li class="tab-item active">国際ブランド<span>◆</span></li>
+            <li class="tab-item">中国ブランド<span>◆</span></li>
+            <li class="tab-item">クリーニング用品<span>◆</span></li>
+            <li class="tab-item">メンズ用品</li>
+         
+    </ul>
     </ul>
     <div class="products">
       <div class="main active">
@@ -100,14 +102,14 @@
     const as = document.querySelectorAll(`.tab li`)
     for (let i = 0; i < as.length; i++) {
       as[i].addEventListener(`mouseenter`, function () {
-        console.log(`鼠标经过`);
-        //排他思想
-        //干掉别人 移除 类active
+        console.log(`マウスホバー`);
+        //排他処理
+        // 他の要素から active クラスを削除
         document.querySelector(`.tab .active`).classList.remove(`active`)
-        //我登基 我添加 类 active
+        // 自分自身に active クラスを追加
         this.classList.add(`active`)
-        // 下面有5个大盒子,一一对应
-        //干掉别人
+        // 下の .main ボックスも、タブと1対1で対応させる
+        // 他の要素の active を削除
         document.querySelector(`.products  .active`).classList.remove(`active`)
         document.querySelector(`.products .main:nth-child(${i + 1})`).classList.add(`active`)
       })

@@ -1,57 +1,70 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="ja">
+
 <head>
+       
     <meta charset="UTF-8">
+       
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>技术分享会报名</title>
+        <title>技術共有会 参加申し込み</title>
+       
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<header><h1>前端技术分享会报名</h1>
-</header>
-    <main>
-        <article>
-    <h2>报名信息</h2>
-            <progress id="completion-progress" value="50" max="100"></progress>
-            <details>
-                <summary>查看详细</summary>
-                <p>本次分享会将探讨最新的前端技术趋势，包括框架、性能优化和未来展望。</p>
-            </details>
+    <header>
+        <h1>フロントエンド技術共有会 参加申し込み</h1>
+    </header>
+        <main>
+                <article>
+                <h2>お申し込み情報</h2>
+                        <progress id="completion-progress" value="50" max="100"></progress>
+                        <details>
+                                <summary>詳細を見る</summary>
+                                <p>今回の共有会では、フレームワーク、パフォーマンス最適化、将来の展望など、最新のフロントエンド技術のトレンドについて探求します。</p>
+                            </details>
 
-            <form action="#" method="post">
-                <div class="form-group">
-                    <label for="name">姓名:</label>
-                    <input type="text" id="name" name="name" placeholder="请输入您的姓名" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">邮箱:</label>
-                    <input type="email" id="email" name="email" placeholder="请输入您的邮箱" required>
-                </div>
+                        <form action="#" method="post">
+                                <div class="form-group">
+                                        <label for="name">氏名:</label>
+                                        <input type="text" id="name" name="name" placeholder="氏名を入力してください" required>
+                                    </div>
+                               
+                                <div class="form-group">
+                                        <label for="email">メールアドレス:</label>
+                                        <input type="email" id="email" name="email" placeholder="メールアドレスを入力してください"
+                        required>
+                                    </div>
 
-                <div class="form-group">
-                    <label for="tel">手机号:</label>
-                    <input type="tel" id="tel" name="tel" placeholder="请输入您的手机号" required pattern="[0-9]{11}">
-                </div>
+                                <div class="form-group">
+                                        <label for="tel">電話番号:</label>
+                                        <input type="tel" id="tel" name="tel" placeholder="電話番号を入力してください" required
+                        pattern="[0-9]{11}">
+                                    </div>
 
-                <div class="form-group">
-                    <label for="event-date">参会日期:</label>
-                    <input type="date" id="event-date" name="event-date" placeholder="请参加日期" required>
-                </div>
+                                <div class="form-group">
+                                        <label for="event-date">参加日:</label>
+                                        <input type="date" id="event-date" name="event-date" placeholder="参加日を選択してください"
+                        required>
+                                _ </div>
 
-                <div class="form-group">
-                    <label for="interest">期望参与度: <span id="range-value">50</span></label>
-                    <input type="range" id="interest" name="interest" required min="0" max="100" value="0">
-                </div>
-                
-                <button type="submit">立即报名</button>
-            </form>
+                                <div class="form-group">
+                                        <label for="interest">参加意欲度: <span id="range-value">50</span></label>
+                                        <input type="range" id="interest" name="interest" required min="0" max="100"
+                        value="0">
+                                    </div>
+                               
+                                <button type="submit">今すぐ申し込む</button>
+                            </form>
 
-        
-        
+                   
+                   
 
-    <script src="script.js"></script>
+               
+            <script src="script.js"></script>
+                   
         </article>
-    </main>
+            </main>
 </body>
+
 </html>

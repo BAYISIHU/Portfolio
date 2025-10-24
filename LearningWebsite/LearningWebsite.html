@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>学车在线首页</title>
+    <title>オンライン トップページ</title>
     <link rel="stylesheet" href="./css/style.css">
     <style>
 
@@ -14,11 +14,10 @@
 
 <body>
 
-    <!-- 4. box核心内容区域开始 -->
     <div class="box w">
         <div class="box-hd">
-            <h3>精品推荐</h3>
-            <a href="#">查看全部</a>
+            <h3>厳選おすすめ</h3>
+            <a href="#">すべて表示</a>
         </div>
         <div class="box-bd">
             <ul class="clearfix">
@@ -27,7 +26,7 @@
         </div>
     </div>
     <script>
-        // 1. 重构  
+        // 1. データ再構築  
         let data = [
             {
                 src: 'images/course01.png',
@@ -71,11 +70,11 @@
             },
         ]
         const ul = document.querySelector('.box-bd ul')
-        // 1. 根据数据的个数，创建 对应的小li
+        // 1. データの数に応じて、対応するliを作成する
         for (let i = 0; i < data.length; i++) {
-            // 2. 创建新的小li
+            // 2. 新しいliを作成する
             const li = document.createElement('li')
-            // 把内容给li
+            // liに内容を挿入する
             li.innerHTML = `
                 <a href="#">
                     <img src=${data[i].src} alt="">
@@ -83,11 +82,11 @@
                         ${data[i].title}
                     </h4>
                     <div class="info">
-                        <span>高级</span> • <span>${data[i].num}</span>人在学习
+                        <span>上級</span> • <span>${data[i].num}</span>人が学習中
                     </div>
                 </a>
             `
-            // 3. ul追加小li
+            // 3. ulにliを追加する
             ul.appendChild(li)
         }
     </script>
