@@ -24,7 +24,7 @@
 
 | プロジェクト名 | 主要技術 / 特徴 | リポジトリ |
 | :--- | :--- | :--- |
-| **[Client-SideAuthState]** | ブラウザ内でのユーザー認証状態の管理。 | [🔗 倉庫](https://github.com/BAYISIHU/Portfolio/tree/main/Client-SideAuthState) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/Portfolio/Client-SideAuthState/) |
+| **[ClientAuthE-Shop]** | ブラウザ内でのユーザー認証状態の管理。 | [🔗 倉庫](https://github.com/BAYISIHU/Portfolio/tree/main/ClientAuthE-Shop) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/Portfolio/ClientAuthE-Shop/) |
 | **[Auto-PlayingImageCarousel]** | JavaScriptによる自動再生イメージカルーセル。 | [🔗 倉庫](https://github.com/BAYISIHU/Portfolio/tree/main/Auto-PlayingImageCarousel) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/Portfolio/Auto-PlayingImageCarousel/) |
 | **[ClientSideCRUDManager]** | クライアントサイドでのCRUD（作成、読取、更新、削除）操作。 | [🔗 倉庫](https://github.com/BAYISIHU/Portfolio/tree/main/ClientSideCRUDManager) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/Portfolio/ClientSideCRUDManager/Client-SideCRUDManager.html) |
 | **[WeatherApplet]** | WeChatミニプログラムAPI、7日間天気予報、台風情報。 | [🔗 倉庫](https://github.com/BAYISIHU/Portfolio/tree/main/WeatherApplet) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/Portfolio/WeatherApplet/WeatherDetails/index.html) |
@@ -46,6 +46,7 @@
 これらのプロジェクトは静的なWebページです。`npm` のインストールは必要ありません。
 
 1.  **リポジトリをクローン：**
+
 ```bash
     git clone [https://github.com/BAYISIHU/Portfolio.git](https://github.com/BAYISIHU/Portfolio.git)
     ```
@@ -55,7 +56,7 @@
     cd Portfolio
     # 興味のあるプロジェクトフォルダに移動し、
     # .html ファイルを直接ブラウザで開いてください。
-    ```
+```
 
 ### 📄 ライセンス
 
@@ -78,7 +79,7 @@ This portfolio showcases my technical practices primarily in the field of Front-
 
 | Project Name | Key Technologies / Features | Repository |
 | :--- | :--- | :--- |
-| **[ClientAuthE-Shope]** | Manages user authentication state within the browser. | [🔗 Repo](https://github.com/BAYISIHU/Portfolio/tree/main/ClientAuthE-Shop) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/Portfolio/ClientAuthE-Shop/) |
+| **[ClientAuthE-Shop]** | Manages user authentication state within the browser. | [🔗 Repo](https://github.com/BAYISIHU/Portfolio/tree/main/ClientAuthE-Shop) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/Portfolio/ClientAuthE-Shop/) |
 | **[Auto-PlayingImageCarousel]** | Auto-playing image carousel using JavaScript. | [🔗 Repo](https://github.com/BAYISIHU/Portfolio/tree/main/Auto-PlayingImageCarousel) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/Portfolio/Auto-PlayingImageCarousel/) |
 | **[ClientSideCRUDManager]** | Client-side CRUD (Create, Read, Update, Delete) operations. | [🔗 Repo](https://github.com/BAYISIHU/Portfolio/tree/main/ClientSideCRUDManager) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/Portfolio/ClientSideCRUDManager/) |
 | **[WeatherApplet]** | WeChat Mini-Program API, 7-day forecast, typhoon tracking. | [🔗 Repo](https://github.com/BAYISIHU/Portfolio/tree/main/WeatherApplet) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/Portfolio/WeatherApplet/WeatherWeek/index.html) |
