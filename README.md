@@ -88,9 +88,8 @@ This portfolio showcases my technical practices primarily in the field of Front-
 | **[Data-DrivenListRenderer]** | Renders an HTML list dynamically from a JS data source. | [🔗 Repo](https://github.com/BAYISIHU/Portfolio/tree/main/Data-DrivenListRenderer) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/Portfolio/Data-DrivenListRenderer/) |
 | **[ImageAccordion]** | Implementation of an image accordion menu. | [🔗 Repo](https://github.com/BAYISIHU/Portfolio/tree/main/ImageAccordion) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/Portfolio/ImageAccordion/) |
 | **[Hover-BasedTabComponent]** | Tab component that switches on hover. | [🔗 Repo](https://github.com/BAYISIHU/Portfolio/tree/main/Hover-BasedTabComponent) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/Portfolio/Hover-BasedTabComponent/) |
-| **[EphemeralPopupScript]** | An auto-closing advertisement or notification popup. | [🔗 Repo](https://github.com/BAYISIHU/Portfolio/tree/main/EphemeralPopupScript) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/Portfolio/EphemeralPopupScript/) |
-| **[SmallFeatures]** | A collection of other small JS/CSS utilities. | [🔗 Repo](https://github.com/BAYISIHU/Portfolio/tree/main/SmallFeatures) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/Portfolio/SmallFeatures/) |
-
+| [EphemeralPopupScript] | An auto-closing advertisement or notification popup. | [🔗 Repo](https://github.com/BAYISIHU/Portfolio/tree/main/EphemeralPopupScript) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/Portfolio/EphemeralPopupScript/) |
+| [SmallFeatures] | A collection of other small JS/CSS utilities. | [🔗 Repo](https://github.com/BAYISIHU/Portfolio/tree/main/SmallFeatures) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/Portfolio/SmallFeatures/) |
 ### 🛠️ Tech Stack
 
 * **Front-End：** HTML5, CSS3, JavaScript (ES6+)
@@ -106,7 +105,7 @@ These are static projects and do not require `npm` installation.
 
 2.  **Open the files:**
     ```bash
-    cd API
+    cd Portfolio
     # Navigate to the project folder you are interested in
     # and open the .html file directly in your browser.
     ```
