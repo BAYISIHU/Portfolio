@@ -1,8 +1,7 @@
 # 🌟 BAYISIHU 作品集 / Portfolio / ポートフォリオ
 
-> 持续更新中 (Last Updated: 2025-10-24)
+> 持续更新中 (Last Updated: 2025-10-25)
 >
-> 微信小程序、Web前端开发技术实践。
 >
 > A showcase of my projects in Web Development and WeChat Mini-Programs.
 >
@@ -21,11 +20,8 @@
 
 ### 🚀 プロジェクト概要
 
-この プロジェクトは、動画を紹介するために、定期的な時間で画像を切り替えている機能を持っています。
-
-| 分類 | プロジェクト名 | 主要技術 / 特徴 | リポジトリ |
-| :--- | :--- | :--- | :--- |
-| | **[Accordion / Slideshow]** | アコーディオンメニューとタイマー式スライドショーの実装。 | [🔗 倉庫](https://github.com/BAYISIHU/Portfolio/tree/main/SlideshowTimer) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/Portfolio/SlideshowTimer/) |
+プロジェクト紹介 (Project Introduction): 
+HTML、CSS (transition)、およびJavaScript (ES6) を用いて実装した、インタラクティブな横型アコーディオン・ギャラリーです。ユーザーのホバーアクションに連動し、Webページに視覚的な奥行きとダイナミックな操作感を提供します。
 
 ### 🛠️ 技術スタック
 
@@ -42,22 +38,10 @@
 
 2.  **ファイルを開く：**
     ```bash
-    cd API
+    cd Portfolio
     # 興味のあるプロジェクトフォルダに移動し、
     # .html ファイルを直接ブラウザで開いてください。
     ```
-
-### 📄 ライセンス
-
-このプロジェクトは **[MIT License]** の下でライセンスされています。詳細は [LICENSE](LICENSE) ファイルをご覧ください。
-
-### 📬 連絡先
-
-👤 **[胡巴依思 (BAYISIHU)]**
-
-* **GitHub:** [BAYISIHU](https://github.com/BAYISIHU)
-* **Email:** hubayisi@gmail.com
-
 ---
 ---
 

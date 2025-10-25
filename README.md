@@ -1,19 +1,18 @@
-# 🌟 BAYISIHU 作品集 / Portfolio / ポートフォリオ
+# 🌟 BAYISIHU ポートフォリオ / Portfolio
 
-> 持续更新中 (Last Updated: 2025-10-24)
->
-> Web前端开发技术实践。
+> Webフロントエンド開発とミニプログラム技術の実践ショーケース。
 >
 > A showcase of my projects in Web Development 
 >
-> Webフロントエンド開発とモバイル用ミニプログラム技術の実践ショーケース。
+> (Last Updated: 2025-10-25)
 
 ---
 
-## 🌍 语言选择 / Language Selection / 言語選択
+## 🌍 言語選択 / Language Selection
 
 * [日本語](#-japanese)
 * [English](#-english)
+
 ---
 ---
 
@@ -23,15 +22,20 @@
 
 このポートフォリオは、主にWebフロントエンド開発分野における私の技術的な実践を紹介するもので、内容は継続的に更新されています。
 
-| 分類 | プロジェクト名 | 主要技術 / 特徴 | リポジトリ |
-| :--- | :--- | :--- | :--- |
-| **大規模プロジェクト** | **[WeatherApplet]** | WeChatミニプログラムAPI呼出、7日間天気予報、台風情報など。 | [🔗 倉庫](https://github.com/BAYISIHU/Portfolio/tree/main/WeatherApplet) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/Portfolio/WeatherApplet/WeatherWeek/index.html) |
-| | **[ShoppingNetwork_rabbit]** | 登録/ログイン、商品購入、**虫眼鏡効果**、フォーム検証。 | [🔗 倉庫](https://github.com/BAYISIHU/Portfolio/tree/main/ShoppingNetwork_rabbit) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/Portfolio/ShoppingNetwork_rabbit/index.html) |
-| **中規模プロジェクト** | **[RegistrationInformation]** | 複雑なフォーム入力検証、タイマー式認証コード、利用規約チェック。 | [🔗 倉庫](https://github.com/BAYISIHU/Portfolio/tree/main/RegistrationInformation) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/Portfolio/RegistrationInformation/index.html)
- |
-| | **[Student Information Form]** | 学生情報の登録、変更、削除などのCRUD操作。 | [🔗 倉庫](https://github.com/BAYISIHU/Portfolio/tree/main/StudentInformationForm) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/Portfolio/StudentInformationForm/StudentInformationForm.html) |
-| **小規模な練習** | **[Small features]** | JS/CSS実用テクニック：カルーセル、アコーディオン、広告自動閉鎖。 | [🔗 倉庫](https://github.com/BAYISIHU/Portfolio/tree/main/SmallFeatures) \| [👁️‍🗨️ Demo]()
-| | **[Accordion / Slideshow]** | アコーディオンメニューとタイマー式スライドショーの実装。 | [🔗 倉庫](https://github.com/BAYISIHU/Portfolio/tree/main/SlideshowTimer) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/Portfolio/SlideshowTimer/) |
+| プロジェクト名 | 主要技術 / 特徴 | リポジトリ |
+| :--- | :--- | :--- |
+| **[Client-SideAuthState]** | ブラウザ内でのユーザー認証状態の管理。 | [🔗 倉庫](https://github.com/BAYISIHU/API/tree/main/Client-SideAuthState) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/API/Client-SideAuthState/) |
+| **[Auto-PlayingImageCarousel]** | JavaScriptによる自動再生イメージカルーセル。 | [🔗 倉庫](https://github.com/BAYISIHU/API/tree/main/Auto-PlayingImageCarousel) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/API/Auto-PlayingImageCarousel/) |
+| **[ClientSideCRUDManager]** | クライアントサイドでのCRUD（作成、読取、更新、削除）操作。 | [🔗 倉庫](https://github.com/BAYISIHU/API/tree/main/ClientSideCRUDManager) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/API/ClientSideCRUDManager/) |
+| **[WeatherApplet]** | WeChatミニプログラムAPI、7日間天気予報、台風情報。 | [🔗 倉庫](https://github.com/BAYISIHU/API/tree/main/WeatherApplet) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/API/WeatherApplet/WeatherWeek/index.html) |
+| **[UserOnboardingAccess]** | 登録/ログインフロー、クライアントサイドフォーム検証。 | [🔗 倉庫](https://github.com/BAYISIHU/API/tree/main/UserOnboardingAccess) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/API/UserOnboardingAccess/) |
+| **[SemanticHTML5Form]** | 複雑なフォーム検証、タイマー式認証コード、セマンティックHTML。 | [🔗 倉庫](https://github.com/BAYISIHU/API/tree/main/SemanticHTML5Form) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/API/SemanticHTML5Form/) |
+| **[Mega-MenuPortalStructure]** | 大規模サイト向けのメガメニューナビゲーション構造。 | [🔗 倉庫](https://github.com/BAYISIHU/API/tree/main/Mega-MenuPortalStructure) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/API/Mega-MenuPortalStructure/) |
+| **[Data-DrivenListRenderer]** | JSデータソースからHTMLリストを動的に描画。 | [🔗 倉庫](https://github.com/BAYISIHU/API/tree/main/Data-DrivenListRenderer) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/API/Data-DrivenListRenderer/) |
+| **[ImageAccordion]** | 画像アコーディオンメニューの実装。 | [🔗 倉庫](https://github.com/BAYISIHU/API/tree/main/ImageAccordion) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/API/ImageAccordion/) |
+| **[Hover-BasedTabComponent]** | ホバーで切り替わるタブコンポーネント。 | [🔗 倉庫](https://github.com/BAYISIHU/API/tree/main/Hover-BasedTabComponent) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/API/Hover-BasedTabComponent/) |
+| **[EphemeralPopupScript]** | 自動で閉じる広告や通知ポップアップ。 | [🔗 倉庫](https://github.com/BAYISIHU/API/tree/main/EphemeralPopupScript) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/API/EphemeralPopupScript/) |
+| **[SmallFeatures]** | その他の小規模なJS/CSSユーティリティ集。 | [🔗 倉庫](https://github.com/BAYISIHU/API/tree/main/SmallFeatures) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/API/SmallFeatures/) |
 
 ### 🛠️ 技術スタック
 
@@ -43,7 +47,7 @@
 
 1.  **リポジトリをクローン：**
     ```bash
-    git clone [https://github.com/BAYISIHU/Portfolio.git](https://github.com/BAYISIHU/Portfolio.git)
+    git clone [https://github.com/BAYISIHU/API.git](https://github.com/BAYISIHU/API.git)
     ```
 
 2.  **ファイルを開く：**
@@ -73,14 +77,20 @@
 
 This portfolio showcases my technical practices primarily in the field of Front-End Web Development and is continuously updated.
 
-| Category | Project Name | Key Technologies / Features | Repository |
-| :--- | :--- | :--- | :--- |
-| **Large Project** | **[WeatherApplet]** | WeChat Mini-Program API calls, 7-day forecast, typhoon tracking. | [🔗 Repo](https://github.com/BAYISIHU/API/tree/main/WeatherApplet) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/API/WeatherApplet/WeatherWeek/index.html) |
-| | **[ShoppingNetwork_rabbit]** | Registration/login flow, product purchasing, **magnifying glass effect**, form validation. | [🔗 Repo](https://github.com/BAYISIHU/API/tree/main/ShoppingNetwork_rabbit) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/API/ShoppingNetwork_rabbit/index.html) |
-| **Medium Project** | **[RegistrationInformation]** | Complex form input validation, timer-based verification code, user agreement checkbox. | [🔗 Repo](https://github.com/BAYISIHU/API/tree/main/RegistrationInformation) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/API/RegistrationInformation/index.html) |
-| | **[Student Information Form]** | CRUD operations for student information (Create, Read, Update, Delete). | [🔗 Repo](https://github.com/BAYISIHU/API/tree/main/Student%20Information%20Form) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/API/Student%20Information%20Form/Student%20Information%20Form.html) |
-| **Small Features** | **[Small features]** | Various JS/CSS utilities: carousel, accordion menu, auto-closing ads. | [🔗 Repo](https://github.com/BAYISIHU/API/tree/main/Small%20features) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/API/SmallFeatures/) |
-| | **[Accordion / Slideshow]** | Implementation of an accordion menu and a timed image slideshow. | [🔗 Repo](https://github.com/BAYISIHU/API/tree/main/Small%20features) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/API/SlideshowTimer/) |
+| Project Name | Key Technologies / Features | Repository |
+| :--- | :--- | :--- |
+| **[Client-SideAuthState]** | Manages user authentication state within the browser. | [🔗 Repo](https://github.com/BAYISIHU/API/tree/main/Client-SideAuthState) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/API/Client-SideAuthState/) |
+| **[Auto-PlayingImageCarousel]** | Auto-playing image carousel using JavaScript. | [🔗 Repo](https://github.com/BAYISIHU/API/tree/main/Auto-PlayingImageCarousel) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/API/Auto-PlayingImageCarousel/) |
+| **[ClientSideCRUDManager]** | Client-side CRUD (Create, Read, Update, Delete) operations. | [🔗 Repo](https://github.com/BAYISIHU/API/tree/main/ClientSideCRUDManager) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/API/ClientSideCRUDManager/) |
+| **[WeatherApplet]** | WeChat Mini-Program API, 7-day forecast, typhoon tracking. | [🔗 Repo](https://github.com/BAYISIHU/API/tree/main/WeatherApplet) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/API/WeatherApplet/WeatherWeek/index.html) |
+| **[UserOnboardingAccess]** | Registration/login flow, client-side form validation. | [🔗 Repo](https://github.com/BAYISIHU/API/tree/main/UserOnboardingAccess) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/API/UserOnboardingAccess/) |
+| **[SemanticHTML5Form]** | Complex form validation, timer-based code, Semantic HTML. | [🔗 Repo](https://github.com/BAYISIHU/API/tree/main/SemanticHTML5Form) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/API/SemanticHTML5Form/) |
+| **[Mega-MenuPortalStructure]** | Mega-menu navigation structure for large-scale sites. | [🔗 Repo](https://github.com/BAYISIHU/API/tree/main/Mega-MenuPortalStructure) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/API/Mega-MenuPortalStructure/) |
+| **[Data-DrivenListRenderer]** | Renders an HTML list dynamically from a JS data source. | [🔗 Repo](https://github.com/BAYISIHU/API/tree/main/Data-DrivenListRenderer) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/API/Data-DrivenListRenderer/) |
+| **[ImageAccordion]** | Implementation of an image accordion menu. | [🔗 Repo](https://github.com/BAYISIHU/API/tree/main/ImageAccordion) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/API/ImageAccordion/) |
+| **[Hover-BasedTabComponent]** | Tab component that switches on hover. | [🔗 Repo](https://github.com/BAYISIHU/API/tree/main/Hover-BasedTabComponent) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/API/Hover-BasedTabComponent/) |
+| **[EphemeralPopupScript]** | An auto-closing advertisement or notification popup. | [🔗 Repo](https://github.com/BAYISIHU/API/tree/main/EphemeralPopupScript) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/API/EphemeralPopupScript/) |
+| **[SmallFeatures]** | A collection of other small JS/CSS utilities. | [🔗 Repo](https://github.com/BAYISIHU/API/tree/main/SmallFeatures) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/API/SmallFeatures/) |
 
 ### 🛠️ Tech Stack
 
@@ -112,7 +122,3 @@ This project is licensed under the **[MIT License]**. See the [LICENSE](LICENSE)
 
 * **GitHub:** [BAYISIHU](https://github.com/BAYISIHU)
 * **Email:** hubayisi@gmail.com
-
----
----
-

@@ -2,7 +2,6 @@
 
 > 持续更新中 (Last Updated: 2025-10-24)
 >
-> 微信小程序、Web前端开发技术实践。
 >
 > A showcase of my projects in Web Development and WeChat Mini-Programs.
 >
@@ -21,11 +20,15 @@
 
 ### 🚀 プロジェクト概要
 
-この プロジェクトは、新規登録時、ユーザー登録
+ Webアプリケーションにおける、新規ユーザー登録ページのフロントエンド実装です。HTML5、CSS、およびJavaScript（ES6）を使用し、ユーザービリティと入力プロセスの整合性を高めるためのクライアントサイド・バリデーションを実装しました。
 
-| 分類 | プロジェクト名 | 主要技術 / 特徴 | リポジトリ |
-| :--- | :--- | :--- | :--- |
-| | **[Accordion / Slideshow]** | アコーディオンメニューとタイマー式スライドショーの実装。 | [🔗 倉庫](https://github.com/BAYISIHU/Portfolio/blob/main/AgreeAgreement/AgreeAgreement.html) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/Portfolio/AgreeAgreement/) |
+主な機能 (Key Features):
+
+セマンティックな登録フォーム構築: HTML5とCSSを用い、ユーザー名、メールアドレス、パスワード（確認用含む）の各入力フィールドを持つ、保守性の高いフォームUIを構築。
+
+クライアントサイド・バリデーション: JavaScript（ES6）のDOM操作を活用し、利用規約のチェックボックスが「同意」されるまで、登録ボタンをdisabled（無効化）状態にする機能を実装。
+
+認証フローのUI設計: 新規登録ページとログインページ（login.html）を連携させ、一貫性のあるユーザー認証フローのUIコンポーネントとして設計。
 
 ### 🛠️ 技術スタック
 
@@ -46,17 +49,6 @@
     # 興味のあるプロジェクトフォルダに移動し、
     # .html ファイルを直接ブラウザで開いてください。
     ```
-
-### 📄 ライセンス
-
-このプロジェクトは **[MIT License]** の下でライセンスされています。詳細は [LICENSE](LICENSE) ファイルをご覧ください。
-
-### 📬 連絡先
-
-👤 **[胡巴依思 (BAYISIHU)]**
-
-* **GitHub:** [BAYISIHU](https://github.com/BAYISIHU)
-* **Email:** hubayisi@gmail.com
 
 ---
 ---
