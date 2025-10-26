@@ -2,6 +2,17 @@
 <html lang="en">
 
 <head>
+  <style>
+    #popup-ad {
+      position: fixed;
+      /* 画面に固定 */
+      left: 0;
+      bottom: 0;
+      z-index: 9999;
+      /* 層が最上位にあること */
+    }
+  </style>
+
   <meta charset="UTF-8">
   <title>Client-SideAuthState</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +22,7 @@
   <link rel="stylesheet" href="./css/index.css">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_2143783_iq6z4ey5vu.css">
   <script>
-    // 检测 userAgent（浏览器信息）
+    //　userAgent（ブラウザ情報）を検出する
     !(function () {
       const userAgent = navigator.userAgent
       // 验证是否为Android或iPhone
@@ -49,7 +60,7 @@
           <a href="javascript:;">帮助中心</a>
         </li>
         <li>
-          <a href="javascript:;">在线客服</a>
+          <a href="./otoiawase.html">在线客服</a>
         </li>
         <li>
           <a href="javascript:;">
@@ -72,28 +83,28 @@
             <a href="./index.html">首页</a>
           </li>
           <li>
-            <a href="./category01.html">生鲜</a>
+            <a href="./product-dev.html">生鲜</a>
           </li>
           <li>
-            <a href="./category01.html">美食</a>
+            <a href="./product-dev.html">美食</a>
           </li>
           <li>
-            <a href="./category01.html">餐厨</a>
+            <a href="./product-dev.html">餐厨</a>
           </li>
           <li>
-            <a href="./category01.html">电器</a>
+            <a href="./product-dev.html">电器</a>
           </li>
           <li>
-            <a href="./category01.html">居家</a>
+            <a href="./product-dev.html">居家</a>
           </li>
           <li>
-            <a href="./category01.html">洗护</a>
+            <a href="./product-dev.html">洗护</a>
           </li>
           <li>
-            <a href="./category01.html">孕婴</a>
+            <a href="./product-dev.html">孕婴</a>
           </li>
           <li>
-            <a href="./category01.html">服装</a>
+            <a href="./product-dev.html">服装</a>
           </li>
         </ul>
       </div>
@@ -1217,7 +1228,7 @@
       </div>
     </div>
   </div>
-
+  <img src="./images/ad.png" alt="" id="popup-ad">
   <script>
     // 1、 获取第一个小li
     const li1 = document.querySelector('.xtx_navs li:first-child')
@@ -1246,7 +1257,44 @@
       // 重新渲染
       render()
     })
+
+    // 1. 定义 "新鲜好物" 区域4个商品的目标链接
+    //    请注意：这个数组的顺序必须和你HTML中的商品顺序保持一致
+    const newGoodsUrls = [
+      './product-dev.html', // 对应 "睿米无线吸尘器F8"
+      './product-dev.html', // 对应 "智能环绕3D空调"
+      './product-dev.html', // 对应 "广东软软糯米煲仔饭"
+      './product-dev.html'  // 对应 "罗西机械智能手表"
+    ];
+
+    // 2. 获取 "新鲜好物" 面板 (.xtx_panel_goods_1) 下的所有 <a> 链接
+    //    document.querySelectorAll 会返回一个包含所有匹配元素的列表
+    const newGoodsLinks = document.querySelectorAll('.xtx_panel_goods_1 a');
+
+    // 3. 遍历这个链接列表 (NodeList)
+    //    link 参数代表遍历到的当前 <a> 元素
+    //    index 参数代表当前元素的索引 (0, 1, 2, 3)
+    newGoodsLinks.forEach((link, index) => {
+      // 4. 将
+      //    我们使用索引从 newGoodsUrls 数组中取出对应的URL
+      //    并将其设置为当前 <a> 标签的 href 属性
+      if (newGoodsUrls[index]) {
+        link.href = newGoodsUrls[index];
+      }
+    });
+
+    //広告
+    const ad = document.querySelector('#popup-ad');
+    if (ad) {
+      //   5 秒 (5000 毫秒) のタイマーを設置
+      setTimeout(function () {
+        // 5秒後，広告のdisplayをnoneに変える
+        ad.style.display = 'none';
+      }, 5000); // 設置時間5秒
+    }
   </script>
+
+
 </body>
 
 </html>
