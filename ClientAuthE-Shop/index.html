@@ -210,7 +210,108 @@
         </ul>
         <!-- 子分类 -->
         <div class="xtx_category_subset">
+          <div class="subset">
+            <h4>分类</h4>
+            <ul>
+              <li><a href="javascript:;">水果</a></li>
+              <li><a href="javascript:;">蔬菜</a></li>
+              <li><a href="javascript:;">肉禽蛋</a></li>
+              <li><a href="javascript:;">海鲜水产</a></li>
+            </ul>
+            <h4>推荐品牌</h4>
+            <ul>
+              <li><a href="javascript:;">佳沛</a></li>
+              <li><a href="javascript:;">褚橙</a></li>
+              <li><a href="javascript:;">都乐</a></li>
+            </ul>
+          </div>
+          <div class="subset">
+            <h4>分类</h4>
+            <ul>
+              <li><a href="javascript:;">面点</a></li>
+              <li><a href="javascript:;">干果</a></li>
+              <li><a href="javascript:;">休闲零食</a></li>
+              <li><a href="javascript:;">方便速食</a></li>
+            </ul>
+            <h4>推荐品牌</h4>
+            <ul>
+              <li><a href="javascript:;">三只松鼠</a></li>
+              <li><a href="javascript:;">良品铺子</a></li>
+            </ul>
+          </div>
+          <div class="subset">
+            <h4>分类</h4>
+            <ul>
+              <li><a href="javascript:;">生活电器</a></li>
+              <li><a href="javascript:;">厨房电器</a></li>
+              <li><a href="javascript:;">个护健康</a></li>
+              <li><a href="javascript:;">数码产品</a></li>
+            </ul>
+          </div>
+          <div class="subset">
+            <h4>分类</h4>
+            <ul>
+              <li><a href="javascript:;">床品</a></li>
+              <li><a href="javascript:;">四件套</a></li>
+              <li><a href="javascript:;">被枕</a></li>
+              <li><a href="javascript:;">家饰</a></li>
+            </ul>
+          </div>
 
+          <div class="subset">
+            <h4>分类</h4>
+            <ul>
+              <li><a href="javascript:;">洗发洗护</a></li>
+              <li><a href="javascript:;">美妆</a></li>
+              <li><a href="javascript:;">个人清洁</a></li>
+            </ul>
+          </div>
+
+          <div class="subset">
+            <h4>分类</h4>
+            <ul>
+              <li><a href="javascript:;">奶粉</a></li>
+              <li><a href="javascript:;">玩具</a></li>
+              <li><a href="javascript:;">辅食</a></li>
+              <li><a href="javascript:;">尿裤湿巾</a></li>
+            </ul>
+          </div>
+
+          <div class="subset">
+            <h4>分类</h4>
+            <ul>
+              <li><a href="javascript:;">水具酒具</a></li>
+              <li><a href="javascript:;">锅具</a></li>
+              <li><a href="javascript:;">餐具</a></li>
+            </ul>
+          </div>
+
+          <div class="subset">
+            <h4>分类</h4>
+            <ul>
+              <li><a href="javascript:;">女装</a></li>
+              <li><a href="javascript:;">男装</a></li>
+              <li><a href="javascript:;">内衣</a></li>
+              <li><a href="javascript:;">鞋靴</a></li>
+            </ul>
+          </div>
+
+          <div class="subset">
+            <h4>分类</h4>
+            <ul>
+              <li><a href="javascript:;">户外</a></li>
+              <li><a href="javascript:;">图书</a></li>
+              <li><a href="javascript:;">宠物</a></li>
+            </ul>
+          </div>
+
+          <div class="subset">
+            <h4>分类</h4>
+            <ul>
+              <li><a href="javascript:;">品牌制造</a></li>
+              <li><a href="javascript:;">国际大牌</a></li>
+            </ul>
+          </div>
         </div>
       </div>
       <!-- 焦点图 -->
@@ -1292,6 +1393,60 @@
         ad.style.display = 'none';
       }, 5000); // 設置時間5秒
     }
+    // --- 分类副菜单（Mega Menu）交互逻辑 ---
+
+    // 1. 获取所有需要的元素
+    // 整个分类区域的容器
+    const category = document.querySelector('.xtx_category');
+    // 左侧主分类 li 的列表 (NodeList)
+    const superListItems = document.querySelectorAll('.xtx_category_super > li');
+    // 右侧子菜单的容器
+    const subsetContainer = document.querySelector('.xtx_category_subset');
+    // 右侧所有单个子菜单面板的列表 (NodeList)
+    const subListPanels = document.querySelectorAll('.xtx_category_subset .subset');
+
+    // 2. 遍历左侧的每一个主分类 'li'
+    superListItems.forEach((li, index) => {
+
+      // 3. 为每个 'li' 添加 'mouseenter' (鼠标移入) 事件监听
+      li.addEventListener('mouseenter', () => {
+
+        // a. (重置) 移除所有 'li' 的 'active' 类
+        superListItems.forEach(item => item.classList.remove('active'));
+        // b. (激活) 给当前鼠标悬停的 'li' 添加 'active' 类
+        li.classList.add('active');
+
+        // c. (显示) 显示子菜单的 '大容器'
+        subsetContainer.style.display = 'block';
+
+        // d. (重置) 隐藏所有 '子菜单面板'
+        subListPanels.forEach(panel => panel.style.display = 'none');
+
+        // e. (激活) 根据索引号显示对应的 '子菜单面板'
+        //    我们利用了 'li' 的索引 (index) 和 'div.subset' 的索引
+        //    是按顺序一一对应的
+        if (subListPanels[index]) {
+          subListPanels[index].style.display = 'flex'; // 使用 flex 来显示
+        }
+      });
+    });
+
+    // 4. 为 '整个' 分类区域添加 'mouseleave' (鼠标移出) 事件监听
+    category.addEventListener('mouseleave', () => {
+
+      // a. (隐藏) 隐藏子菜单的 '大容器'
+      subsetContainer.style.display = 'none';
+
+      // b. (重置) 移除所有 'li' 的 'active' 类
+      superListItems.forEach(item => item.classList.remove('active'));
+
+      // c. (恢复默认) 
+      //    你的HTML中 "美食" (索引为1) 默认是 active 状态，
+      //    我们在这里把它加回去，保持视觉上的一致性。
+      if (superListItems[1]) {
+        superListItems[1].classList.add('active');
+      }
+    });
   </script>
 
 
