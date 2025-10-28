@@ -79,6 +79,7 @@
   background-color: rgba(0, 0, 0, 0.1);
   position: absolute;
   top: 50%;
+  z-index: 3;
 }
 
 .xtx_banner>a.prev {
@@ -98,6 +99,47 @@
   position: absolute;
   left: 250px;
   bottom: 22px;
+}
+
+/* --- 轮播图 (Banner) 样式 --- */
+
+/* 1. 让 <ul> 成为定位容器 */
+.xtx_banner ul {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* 2. 让所有 <li> 在同一位置重叠 */
+.xtx_banner li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* 默认全部透明 (隐藏) */
+  opacity: 0;
+  /* 添加过渡动画 */
+  transition: opacity 0.5s ease;
+  /* 确保图片在控制按钮下面 */
+  z-index: 1;
+}
+
+/* 3. 只显示有 'active' 类的 <li> */
+.xtx_banner li.active {
+  opacity: 1;
+  /* 激活的幻灯片不透明 (显示) */
+  z-index: 2;
+  /* 确保它在其他幻灯片之上 */
+}
+
+/* 强制轮播图中的所有图片都铺满容器 */
+.xtx_banner li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* ⇐⇐⇐ 这是最关键的一行 */
 }
 
 .xtx_banner .indicator span {

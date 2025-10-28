@@ -316,22 +316,37 @@
       </div>
       <!-- 焦点图 -->
       <div class="xtx_banner">
-
         <ul>
-          <li>
-            <a href="javascript:;">
-              <img src="./uploads/banner_1.png" alt="">
-            </a>
-          </li>
-        </ul>
+                              <li class="active">
+                        <a href="javascript:;">
+                            <img src="./uploads/banner_1.png" alt="">
+                          </a>
+                      </li>
+                              <li>
+                        <a href="javascript:;">
+                            <img src="./uploads/banner_2.png" alt="">             </a>
+                      </li>
+                              <li>
+                        <a href="javascript:;">
+                            <img src="./uploads/banner_3.png" alt="">             </a>
+                      </li>
+                              <li>
+                        <a href="javascript:;">
+                            <img src="./uploads/banner_4.jpg" alt="">             </a>
+                      </li>
+                              <li>
+                        <a href="javascript:;">
+                            <img src="./uploads/banner_5.jpg" alt="">             </a>
+                      </li>
+                  </ul>
         <!-- 切换按钮  -->
         <a href="javascript:;" class="prev sprites"></a>
         <a href="javascript:;" class="next sprites"></a>
         <!-- 指示器 -->
         <div class="indicator">
-          <span></span>
-          <span></span>
           <span class="active"></span>
+          <span></span>
+          <span></span>
           <span></span>
           <span></span>
         </div>
@@ -1447,6 +1462,91 @@
         superListItems[1].classList.add('active');
       }
     });
+    // --- 轮播图 (Banner) 交互逻辑 ---
+
+    ; (function () {
+      // 1. 获取所有需要的元素
+      const banner = document.querySelector('.xtx_banner');
+      if (!banner) { return; } // 如果页面上没有 banner，就停止执行
+
+      const slides = banner.querySelectorAll('ul li');
+      const prevBtn = banner.querySelector('.prev');
+      const nextBtn = banner.querySelector('.next');
+      const indicators = banner.querySelectorAll('.indicator span');
+
+      // 2. 定义变量
+      let activeIndex = 0; // 追踪当前激活的索引 (从 0 开始)
+      let timerId = null;  // 用于存放自动播放的定时器
+      const slideCount = slides.length; // 幻灯片总数
+
+      // 3. 核心功能：切换幻灯片
+      function switchSlide(newIndex) {
+        // --- 3a. 处理索引边界 ---
+        // 如果 newIndex 太大，就回到 0
+        if (newIndex >= slideCount) {
+          newIndex = 0;
+        }
+        // 如果 newIndex 太小，就去到最后一张
+        if (newIndex < 0) {
+          newIndex = slideCount - 1;
+        }
+
+        // --- 3b. 切换类 ---
+        // (重置) 移除当前激活的 'active' 类
+        slides[activeIndex].classList.remove('active');
+        indicators[activeIndex].classList.remove('active');
+
+        // (激活) 给新的索引添加 'active' 类
+        slides[newIndex].classList.add('active');
+        indicators[newIndex].classList.add('active');
+
+        // --- 3c. 更新索引 ---
+        activeIndex = newIndex;
+      }
+
+      // 4. 绑定事件监听
+
+      // 4a. 点击 "下一张" 按钮
+      nextBtn.addEventListener('click', () => {
+        switchSlide(activeIndex + 1);
+      });
+
+      // 4b. 点击 "上一张" 按钮
+      prevBtn.addEventListener('click', () => {
+        switchSlide(activeIndex - 1);
+      });
+
+      // 4c. 点击指示器
+      indicators.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+          switchSlide(index);
+        });
+      });
+
+      // 5. 自动播放
+      function startAutoplay() {
+        // 先清除可能存在的旧定时器
+        clearInterval(timerId);
+        // 设置新的定时器 (3000毫秒 = 3秒)
+        timerId = setInterval(() => {
+          // 模拟点击 "下一张" 按钮
+          switchSlide(activeIndex + 1);
+        }, 3000);
+      }
+
+      // 6. 鼠标悬停时停止/恢复自动播放
+      banner.addEventListener('mouseenter', () => {
+        clearInterval(timerId); // 鼠标移入，停止播放
+      });
+
+      banner.addEventListener('mouseleave', () => {
+        startAutoplay(); // 鼠标移出，重新开始播放
+      });
+
+      // 7. 立即开始第一次自动播放
+      startAutoplay();
+
+    })(); // 使用 IIFE (立即执行函数) 避免变量污染全局
   </script>
 
 
