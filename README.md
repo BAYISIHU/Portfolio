@@ -26,7 +26,7 @@
 
 **2. MiniAppRepo (✨ 新規追加)**
 * **概要:** [小規模なJS/CSSユーティリティ集。]
-* **リンク:** [🔗 倉庫](https://github.com/BAYISIHU/Portfolio/tree/main/MiniAppRepo) | [👁️‍🗨️ Demo](https://bayisihu.github.io/Portfolio/MiniAppRepo/)
+* **リンク:** [🔗 倉庫](https://github.com/BAYISIHU/Portfolio/tree/main/MiniAppRepo) | 
 ---
 #### 🗂️ その他のプロジェクト一覧 (Other Projects List)
 | プロジェクト名 | 主要技術 / 特徴 | リポジトリ |
