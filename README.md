@@ -4,7 +4,7 @@
 >
 > A showcase of my projects in Web Development 
 >
-> (Last Updated: 2025-10-25)
+>(Last Updated: 2025-11-01)
 
 ---
 
@@ -18,13 +18,19 @@
 
 ## 🇯🇵 Japanese
 
-### 🚀 プロジェクト概要
+### 🚀 プロジェクト
+#### ⭐ 注目のプロジェクト (Featured Projects)
+**1. ClientAuthE-Shop**
+* **概要:** localStorage APIと navigator オブジェクトを活用した、クライアント側でのユーザー認証状態の管理デモ。
+* **リンク:** [🔗 倉庫](https://github.com/BAYISIHU/Portfolio/tree/main/ClientAuthE-Shop) | [👁️‍🗨️ Demo](https://bayisihu.github.io/Portfolio/ClientAuthE-Shop/)
 
-このポートフォリオは、主にWebフロントエンド開発分野における私の技術的な実践を紹介するもので、内容は継続的に更新されています。
-
+**2. MiniAppRepo (✨ 新規追加)**
+* **概要:** [小規模なJS/CSSユーティリティ集。]
+* **リンク:** [🔗 倉庫](https://github.com/BAYISIHU/Portfolio/tree/main/MiniAppRepo) | [👁️‍🗨️ Demo](https://bayisihu.github.io/Portfolio/MiniAppRepo/)
+---
+#### 🗂️ その他のプロジェクト一覧 (Other Projects List)
 | プロジェクト名 | 主要技術 / 特徴 | リポジトリ |
 | :--- | :--- | :--- |
-| **[ClientAuthE-Shop]** | localStorage APIと navigator オブジェクトを活用しています。 | [🔗 倉庫](https://github.com/BAYISIHU/Portfolio/tree/main/ClientAuthE-Shop) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/Portfolio/ClientAuthE-Shop/) |
 | **[Auto-PlayingImageCarousel]** | 自動再生型の画像カルーセル・コンポーネント | [🔗 倉庫](https://github.com/BAYISIHU/Portfolio/tree/main/Auto-PlayingImageCarousel) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/Portfolio/Auto-PlayingImageCarousel/) |
 | **[ClientSideCRUDManager]** | 基本的なデータ管理（作成・読み取り・削除）のデモンストレーションです | [🔗 倉庫](https://github.com/BAYISIHU/Portfolio/tree/main/ClientSideCRUDManager) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/Portfolio/ClientSideCRUDManager/Client-SideCRUDManager.html) |
 | **[WeatherApplet]** | 7日間天気予報、台風情報。 | [🔗 倉庫](https://github.com/BAYISIHU/Portfolio/tree/main/WeatherApplet) \| [👁️‍🗨️ Demo](https://bayisihu.github.io/Portfolio/WeatherApplet/WeatherDetails/index.html) |
