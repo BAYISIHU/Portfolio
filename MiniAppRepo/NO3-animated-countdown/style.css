@@ -1,0 +1,153 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  /* スクロールバー非表示 */
+}
+
+h4 {
+  font-size: 20px;
+  margin: 5px;
+  text-transform: uppercase;
+}
+
+/* 2つの画面に共通の中央配置スタイル */
+.counter,
+.final {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* 終了画面は初期状態では非表示 */
+.final {
+  transform: translate(-50%, -50%) scale(0);
+}
+
+/* リプレイボタンのスタイル */
+#replay {
+  background-color: #3498db;
+  border-radius: 3px;
+  border: none;
+  color: aliceblue;
+  padding: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* style.css に追記 */
+
+.nums {
+  color: #3498db;
+  font-size: 50px;
+  position: relative;
+  overflow: hidden;
+  /* この外にはみ出た要素は隠す */
+  width: 250px;
+  height: 50px;
+}
+
+.nums span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* rotate(120deg) でコンテナの外に隠れた状態にする */
+  transform: translate(-50%, -50%) rotate(120deg);
+  /* 回転軸を下に設定 */
+  transform-origin: bottom center;
+}
+
+/* style.css に追記 */
+
+/* .in クラスが付いた時のスタイル */
+.nums span.in {
+  transform: translate(-50%, -50%) rotate(0deg);
+  animation: goIn 0.5s ease-in-out;
+}
+
+/* .out クラスが付いた時のスタイル */
+.nums span.out {
+  animation: goOut 0.5s ease-in-out;
+}
+
+/* 入ってくるアニメーション */
+@keyframes goIn {
+  0% {
+    transform: translate(-50%, -50%) rotate(120deg);
+  }
+
+  30% {
+    transform: translate(-50%, -50%) rotate(-20deg);
+  }
+
+  60% {
+    transform: translate(-50%, -50%) rotate(10deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+
+/* 出ていくアニメーション */
+@keyframes goOut {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  60% {
+    transform: translate(-50%, -50%) rotate(20deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(-120deg);
+  }
+}
+
+/* カウンター画面が消えるアニメーション */
+/* (Animation for the counter screen to hide) */
+.counter.hide {
+  transform: translate(-50%, -50%) scale(0);
+  animation: hide 0.2s ease-out;
+}
+
+@keyframes hide {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
+
+/* 最終画面(GO)が現れるアニメーション */
+/* (Animation for the final screen (GO) to show) */
+.final.show {
+  transform: translate(-50%, -50%) scale(1);
+  animation: show 0.2s ease-out;
+}
+
+@keyframes show {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  30% {
+    transform: translate(-50%, -50%) scale(1.4);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
