@@ -10,7 +10,7 @@
 
 ### 2. 3Dボックス背景 (3D Boxes Background)
 **Demo:**
-[プロジェクトデモはこちら](https://github.com/BAYISIHU/Portfolio/blob/main/MiniAppRepo/NO2-3d-boxes-background/index.html)
+[プロジェクトデモはこちら](https://bayisihu.github.io/Portfolio\MiniAppRepo\NO2-3d-boxes-background\index.html)
 
 **概要:**
 CSSの疑似要素 (`::before`, `::after`) と `transform` (`skew`) を利用して、フラットなボックスに立体的な（3D）外観を加えています。ボタンをクリックすると、JavaScriptがクラスを切り替え、全てのボックスが360度回転するマジックのようなアニメーションが実行されます。
@@ -22,7 +22,8 @@ CSSの疑似要素 (`::before`, `::after`) と `transform` (`skew`) を利用し
 
 ### 3. アニメーション・カウントダウン (Animated Countdown)
 **Demo:**
-[プロジェクトデモはこちら]
+[プロジェクトデモはこちら](https://bayisihu.github.io/Portfolio\MiniAppRepo\NO3-animated-countdown\index.html)
+
 **概要:**
 CSSの `@keyframes` とJavaScriptの `animationend` イベントを活用した、アニメーション付きのカウントダウンタイマーです。数字が一つずつ回転しながら（`goIn`, `goOut`アニメーション）表示され、「0」になるとカウンターが消え、「GO」というメッセージとリプレイボタンが表示されます。
 
@@ -33,7 +34,7 @@ CSSの `@keyframes` とJavaScriptの `animationend` イベントを活用した�
 
 ### 4. 展開式ナビゲーション (Rotating Navigation)
 **Demo:**
-[プロジェクトデモはこちら]
+[プロジェクトデモはこちら](https://bayisihu.github.io/Portfolio\MiniAppRepo\NO2-3d-boxes-background)
 **概要:**
 ハンバーガーアイコンをクリックすると、ナビゲーションメニューが展開・収納されます。展開時には、メニュー全体が横に広がり、各メニュー項目がY軸回転 (`rotateY`) しながら出現します。同時に、アイコンもX形に変形する、スムーズなCSSアニメーションが実装されています。
 
