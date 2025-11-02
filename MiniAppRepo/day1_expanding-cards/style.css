@@ -1,0 +1,67 @@
+.container {
+  width: 90%;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.panel {
+  background: #6b5b95;
+  color: white;
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  font-size: 24px;
+  border-radius: 10px;
+  transition: flex 0.5s ease-in-out;
+  cursor: pointer;
+  height: 80vh;
+}
+
+.panel:nth-child(1) {
+  background: url('https://imgs.699pic.com/images/500/493/791.jpg!seo.v1') center/cover no-repeat;
+}
+
+.panel:nth-child(2) {
+  background: url('https://imgs.699pic.com/images/501/574/551.jpg!seo.v1') center/cover no-repeat;
+}
+
+.panel:nth-child(3) {
+  background: url('https://imgs.699pic.com/images/501/208/286.jpg!seo.v1') center/cover no-repeat;
+}
+
+.panel:nth-child(4) {
+  background: url('https://imgs.699pic.com/images/501/574/551.jpg!seo.v1') center/cover no-repeat;
+}
+
+.panel:nth-child(5) {
+  background: url('https://imgs.699pic.com/images/500/606/634.jpg!seo.v1') center/cover no-repeat;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+span {
+  margin: 20px;
+  font-size: 24px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.panel.active span {
+  opacity: 1;
+}
+
+/* 响应式设计 */
+@media (max-width: 480px) {
+  .panel:nth-child(4) {
+    display: none;
+  }
+
+  .panel:nth-child(5) {
+    display: none;
+  }
+}

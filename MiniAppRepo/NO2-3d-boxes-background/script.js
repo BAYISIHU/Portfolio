@@ -10,14 +10,11 @@ function createBoxes() {
     for (let j = 0; j < 4; j++) {
       const box = document.createElement('div');
       box.classList.add('box');
-
       // 背景画像の位置を計算して設定
       box.style.backgroundPosition = `${-j * 125}px ${-i * 125}px`;
-
       boxesContainer.appendChild(box);
     }
   }
 }
-
 // 関数を実行
 createBoxes();
