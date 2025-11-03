@@ -61,7 +61,7 @@
 .xtx_category_subset {
   width: 1000px;
   height: 100%;
-  background-color: rgba(237, 178, 237, 0.75);
+  background-color: rgba(243, 232, 236, 0.75);
   display: none;
   position: absolute;
   top: 0;
@@ -230,10 +230,18 @@
   border-radius: 2px;
 }
 
-.xtx_panel .xtx_panel_header .tabs-bar a:hover,
-.xtx_panel .xtx_panel_header .tabs-bar a.active {
+/* 默认样式 (白底黑字) - 由 common.css 或浏览器默认提供。
+  我们只需要定义鼠标悬停时的样式。
+*/
+
+/* 规则 1: 鼠标悬停 ( :hover ) 时的样式 
+  (适用于所有标签，包括 '果物')
+*/
+.xtx_panel .xtx_panel_header .tabs-bar a:hover {
   background-color: #27BA9B;
+  /* 绿底 */
   color: #fff;
+  /* 白字 */
 }
 
 .xtx_panel .xtx_panel_goods_1 {
