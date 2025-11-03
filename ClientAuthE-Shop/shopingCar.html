@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/shopingCar.css" />
+  <link rel="stylesheet" href="./css/inputnumber.css" />
+  <title>ショッピングカート</title>
+</head>
+
+<body>
+  <div class="app-container" id="app">
+    <!-- 顶部banner -->
+    <div class="banner-box"><img src="http://autumnfish.cn/static/fruit.jpg" alt="" /></div>
+    <!-- 面包屑 -->
+    <div class="breadcrumb">
+      <span>🏠</span>
+      /
+      <span>ショッピングカート</span>
+    </div>
+    <!-- 购物车主体 -->
+    <div class="main">
+      <div class="table">
+        <!-- 头部 -->
+        <div class="thead">
+          <div class="tr">
+            <div class="th">ショッピングカート</div>
+            <div class="th th-pic">商品画像</div>
+            <div class="th">単価</div>
+            <div class="th num-th">数量</div>
+            <div class="th">小計</div>
+            <div class="th">操作</div>
+          </div>
+        </div>
+        <!-- 身体 -->
+        <div class="tbody">
+
+          <!-- 渲染需要的行 -->
+
+          <div class="tr">
+            <div class="td"><input type="checkbox" checked /></div>
+            <div class="td"><img src="http://autumnfish.cn/static/火龙果.png" alt="" /></div>
+            <div class="td">6</div>
+            <div class="td">
+              <div class="my-input-number">
+                <button class="decrease"> - </button>
+                <span class="my-input">2</span>
+                <button class="increase"> + </button>
+              </div>
+            </div>
+            <div class="td">12</div>
+            <div class="td"><button class="del">削除</button></div>
+          </div>
+
+
+        </div>
+      </div>
+      <!-- 底部 -->
+      <div class="bottom">
+        <!-- 全选 -->
+        <label class="check-all">
+          <input type="checkbox" />
+          すべて選択
+        </label>
+        <div class="right-box">
+          <!-- 所有商品总价 -->
+          <span class="price-box">合計金額&nbsp;&nbsp;:&nbsp;&nbsp;¥&nbsp;<span class="price">24</span></span>
+          <!-- 结算按钮 -->
+          <button class="button pay">お会計(${totalNum})</button>
+        </div>
+      </div>
+    </div>
+    <!-- 空车 -->
+    <div class="empty" style="display: none;">🛒カートは空です</div>
+  </div>
+  <script>
+    const fallbackData = [
+      {
+        id: 1,
+        icon: './img/pitaya.png',
+        isChecked: true,
+        num: 2,
+        price: 6,
+      },
+      {
+        id: 2,
+        icon: './img/durian.png',
+        isChecked: true,
+        num: 7,
+        price: 20,
+      },
+      {
+        id: 3,
+        icon: './img/litchi.png',
+        isChecked: true,
+        num: 3,
+        price: 40,
+      },
+      {
+        id: 4,
+        icon: './img/pear.png',
+        isChecked: true,
+        num: 10,
+        price: 3,
+      },
+      {
+        id: 5,
+        icon: './img/cherry.png',
+        isChecked: true,
+        num: 20,
+        price: 34,
+      },
+    ]
+    // ★ 新增功能 1：加载数据 ★
+    // 尝试从 localStorage 获取已保存的数据。
+    // 如果没有（返回 null），则使用 || 逻辑运算符，采用后备数据。
+    const dataArr = JSON.parse(localStorage.getItem('shoppingCartData')) || fallbackData
+    // 1. 渲染业务
+    const tbody = document.querySelector('.tbody')
+    const price = document.querySelector('.price')
+    const checkAll = document.querySelector('.check-all input')
+
+    function render() {
+      let total = 0
+      const strArr = dataArr.map(function (ele, index) {
+        return `
+            <div class="tr" data-id="${index}">
+              <div class="td"><input type="checkbox" ${ele.isChecked ? 'checked' : ''} /></div>
+              <div class="td"><img src="${ele.icon}" alt="" /></div>
+              <div class="td">${ele.price}</div>
+              <div class="td">
+                <div class="my-input-number">
+                  <button class="decrease"> - </button>
+                  <span class="my-input">${ele.num}</span>
+                  <button class="increase"> + </button>
+                </div>
+              </div>
+              <div class="td">${ele.price * ele.num}</div>
+              <div class="td"><button class="button del">删除</button></div>
+          </div> 
+        `
+      })
+      tbody.innerHTML = strArr.join('')
+
+      // 全选按钮设置
+      checkAll.checked = dataArr.every(ele => ele.isChecked === true)
+      // 总价模块：只选择勾选的商品
+      const newArr = dataArr.filter(ele => ele.isChecked)
+
+      const totalPrice = newArr.reduce((prev, item) => prev += item.num * item.price, 0)
+      document.querySelector('.price-box .price').innerHTML = totalPrice.toFixed(2)
+      const totalNum = newArr.reduce((prev, item) => prev += item.num, 0)
+      document.querySelector('.pay').innerHTML = `结算(${totalNum})`
+      // 空空购物车是否显示
+      const empty = document.querySelector('.empty')
+      empty.style.display = dataArr.length === 0 ? 'block' : 'none'
+      // ★ 新增功能 1：保存数据 ★
+      // 每次渲染（即数据发生任何变化）后，都将最新数据保存到 localStorage
+      localStorage.setItem('shoppingCartData', JSON.stringify(dataArr))
+
+    }
+    render()
+
+
+    // 2. イベントデリゲート (事件委托)
+    tbody.addEventListener('click', function (e) {
+
+      // ★ 优化 ★ 我们需要父元素 .tr 上的 data-id，最好先获取
+      // e.target (如 <button>) -> .td -> .tr
+      // 使用 closest('.tr') 可以更稳定地找到父级的 .tr 元素
+      const tr = e.target.closest('.tr')
+      // 如果没有点击在 .tr 内部（例如点击了空白处），则 tr 为 null，直接返回
+      if (!tr) return
+
+      const id = tr.dataset.id
+
+      // 削除処理 (删除业务)
+      // ★ 优化 ★ 使用 classList.contains 替代 e.target.className === 'del'
+      if (e.target.classList.contains('del')) {
+
+        // ★★★ 你遗漏的功能在这里 ★★★
+        // ★ 新增功能 2：删除确认 ★
+        if (confirm('本当にこの商品を削除しますか？')) {
+          dataArr.splice(id, 1)
+          //描画処理
+          render()
+        }
+      }
+
+      // 個別チェックボックスが「すべて選択」を制御する処理 (小复选框业务)
+      if (e.target.tagName === 'INPUT') {
+        dataArr[id].isChecked = e.target.checked
+        //描画処理
+        render()
+      }
+
+      // 数量を増やす処理 (增加数量业务)
+      if (e.target.className === "increase") {
+        dataArr[id].num++
+        render()
+      }
+
+      // 数量を減らす処理 (删除数量业务)
+      if (e.target.className === "decrease") {
+        if (dataArr[id].num > 1) { // 优化：仅在大于1时才减
+          dataArr[id].num--
+          render()
+        }
+      }
+    })
+    // 3. 全选反选点击
+    // 3.1 点击全选修改数组所有选中状态为true
+    checkAll.addEventListener('click', function () {
+      dataArr.forEach(ele => ele.isChecked = this.checked)
+      // console.log(dataArr)
+      // 渲染页面
+      render()
+    })
+
+
+
+
+  </script>
+</body>
+
+</html>
