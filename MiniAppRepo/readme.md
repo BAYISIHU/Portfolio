@@ -7,7 +7,21 @@
 ---
 
 ## 収録プロジェクト
+### 1. 3Dボックス背景 (3D Boxes Background)
+**Demo:**
+[プロジェクトデモはこちら](https://BAYISIHU.github.io/Portfolio/MiniAppRepo/day1_expanding-cards/)
+**概要:**
+ HTML、CSS、JavaScript（ES6+）を使用して実装した、インタラクティブなUIコンポーネントです。複数のカードが横並びに配置されており、ユーザーが特定のカードをクリックすると、そのカードがアニメーションと共にスムーズに拡大し、関連するテキストが表示されます。
+ **主な使用技術:**
+HTML5: セマンティックな構造定義
+CSS3:
+Flexbox: カードの横並びレイアウトと展開・縮小の制御
+Transitions: flexとopacityプロパティの変更を滑らかにするアニメーション
+メディアクエリ: レスポンシブ対応
+JavaScript (Vanilla JS):
+イベントリスナー: clickイベントの監視
 
+classList操作: activeクラスの追加・削除による状態管理
 ### 2. 3Dボックス背景 (3D Boxes Background)
 **Demo:**
 [プロジェクトデモはこちら](https://BAYISIHU.github.io/Portfolio/MiniAppRepo/NO2-3d-boxes-background/)
