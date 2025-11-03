@@ -1,6 +1,7 @@
 .xtx-wrapper {
   background: #f5f5f5;
   line-height: 1.4;
+  transition: padding-top 0.3s ease-in-out;
 }
 
 .xtx-wrapper .container {
@@ -510,11 +511,12 @@
   padding: 24px 0;
 }
 
+
 /* ====================
-   你要求添加的样式
+   你要求添加的样式 (已合并所有修复)
    ==================== */
 
-/* 吸顶导航栏的样式 */
+/* 1. 吸顶导航栏的样式 */
 .sticky {
   position: fixed;
   left: 0;
@@ -531,7 +533,7 @@
   transition: top 0.4s;
 }
 
-/* 返回顶部的样式 */
+/* 2. 返回顶部的样式 */
 .backTop {
   position: fixed;
   right: 40px;
@@ -556,9 +558,7 @@
 }
 
 .backTop .backIcon {
-  /* 你可能需要在这里为你自己的图标设置样式，
-     例如，如果使用iconfont: */
-  /* font-family: 'iconfont'; */
+  /* 你可能需要在这里为你自己的图标设置样式 */
   font-size: 20px;
 }
 
@@ -566,67 +566,34 @@
   margin-top: 2px;
 }
 
-/* 1. 吸顶导航栏的默认状态 (隐藏在屏幕顶部) */
-.sticky {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 999;
+/* 3. (新) 吸顶导航栏内部布局 */
 
-  /* --- 优化的核心 --- */
-
-  /* (重要) 将其移到屏幕可视区域的“上方” */
-  transform: translateY(-100%);
-
-  /* (重要) 添加一个0.3秒的过渡动画，针对transform属性 */
-  transition: transform 0.3s ease-in-out;
-
-  /* (可选) 建议添加背景色和阴影，使其更美观 */
-  background-color: #ffffff;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* 2. 当 .show 类名被添加时的状态 (滑入到视图中) */
-.sticky.show {
-  /* (重要) 将其移动回屏幕顶部 (Y轴0的位置) */
-  transform: translateY(0);
-}
-
-/* (可选) 
-   您可能需要为 .header-sticky.container 设置左右内边距或固定宽度 
-   来使其内容居中
-*/
+/* 设置 .header-sticky 为 flex 容器 */
 .header-sticky.container {
-  /* 这部分取决于您的 .container 类的定义
-    如果您的 .container 已经有 margin: 0 auto 和 width，
-    您可能不需要额外的样式。
-  */
   display: flex;
-  /* 使用 flex 布局来对齐 logo, nav, right */
+  justify-content: space-between;
   align-items: center;
-  /* 垂直居中 */
-  /* 示例：假设您的 .container 宽度是 1240px 且居中 */
-  width: 1240px;
-  margin: 0 auto;
-  height: 80px;
-  /* 示例：给导航栏一个固定的高度 */
+  height: 100%;
 }
 
-/* (可选) 优化内部布局 */
-.sticky-logo {
-  /* logo部分通常不需要缩小 */
-  flex-shrink: 0;
-}
-
+/* 设置 .sticky-nav 内部的 <ul> 为 flex 容器 */
 .sticky-nav {
-  /* nav部分占据主要空间 */
-  flex-grow: 1;
-  margin: 0 20px;
-  /* 示例：在logo和右侧链接之间增加间距 */
+  display: flex;
 }
 
+/* 为导航 <li> 添加间距 */
+.sticky-nav li {
+  padding: 0 15px;
+  /* 在每个导航项之间添加一些间距 */
+}
+
+/* 设置 .sticky-right 为 flex 容器 */
 .sticky-right {
-  /* 右侧链接部分不需要缩小 */
-  flex-shrink: 0;
+  display: flex;
+}
+
+/* 为右侧链接添加间距 */
+.sticky-right a {
+  margin-left: 20px;
+  /* 在 "品牌" 和 "专题" 之间添加间距 */
 }

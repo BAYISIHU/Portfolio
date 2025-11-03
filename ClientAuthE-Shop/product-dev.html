@@ -642,12 +642,12 @@
 
           // 3. 控制 Sticky 导航栏 和 内容边距
           if (n >= top) {
-            sticky.style.top = '0px';
+            sticky.classList.add('show');
             // 新增：当 sticky 导航显示时，给 .xtx-wrapper 
             // 添加 80px 的上内边距 (sticky 的高度)
             xtxWrapper.style.paddingTop = '80px';
           } else {
-            sticky.style.top = '-80px';
+            sticky.classList.remove('show');
             // 新增：当 sticky 导航隐藏时，移除内边距
             xtxWrapper.style.paddingTop = '0px';
           }
@@ -742,8 +742,8 @@
           // console.log(e.pageX)鼠标在页面中的坐标
           // middle 中等盒子的坐标
           // console.log(middle.getBoundingClientRect().left)
-          let x = e.pageX - middle.getBoundingClientRect().left
-          let y = e.pageY - middle.getBoundingClientRect().top - document.documentElement.scrollTop
+          let x = e.clientX - middle.getBoundingClientRect().left
+          let y = e.clientY - middle.getBoundingClientRect().top
           // console.log(x, y)
           // 黑色遮罩移动 在 middle 盒子内 限定移动的距离
           if (x >= 0 && x <= 400 && y >= 0 && y <= 400) {
