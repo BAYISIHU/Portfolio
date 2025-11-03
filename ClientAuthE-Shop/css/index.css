@@ -2,7 +2,7 @@
 
 /** 分类及焦点图 **/
 .xtx_entry {
-  height: 500px;
+  height: 600px;
   background-color: #f2f2f2;
   position: relative;
 }
@@ -17,10 +17,12 @@
 
 
 .xtx_category_super li {
-  height: 50px;
+  height: 60px;
   padding: 0 20px 0 40px;
   transition: background-color 0.25s;
   cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
 .xtx_category_super li:hover,
@@ -31,7 +33,10 @@
 .xtx_category_super a {
   color: #fff;
   font-size: 16px;
-  line-height: 50px;
+  line-height: 1.4;
+  /* (修改) 从 50px 改为 1.4, 允许自然换行 */
+  width: 100%;
+  /* (添加) 让 a 标签占满 flex 容器的宽度 */
 }
 
 .xtx_category_super a small {
@@ -42,24 +47,40 @@
   display: block;
   width: 12px;
   height: 12px;
-  margin-top: 20px;
+  margin-top: 0;
+  /* (修改) 移除 margin-top, flex 会自动居中 */
   background-position: -75px -110px;
-  float: right;
+  float: none;
+  /* (修改) 移除 float */
+  margin-left: auto;
+  /* (添加) 自动推到最右侧 */
+  flex-shrink: 0;
+  /* (添加) 防止箭头被压缩 */
 }
 
 .xtx_category_subset {
-  width: 990px;
+  width: 1000px;
   height: 100%;
-  background-color: rgba(237, 178, 237, 0.95);
+  background-color: rgba(237, 178, 237, 0.75);
   display: none;
   position: absolute;
   top: 0;
   left: 250px;
+  z-index: 99;
+  /* 确保它在 banner 之上 */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  /* 添加一点阴影 */
 }
+
+
+
+
+
+
 
 .xtx_banner {
   width: 1240px;
-  height: 500px;
+  height: 600px;
   overflow: hidden;
   position: relative;
 }
@@ -831,26 +852,7 @@
 
 /* --- 副菜单 (Mega Menu) 样式 --- */
 
-/* 子菜单容器的样式 */
-.xtx_category_subset {
-  position: absolute;
-  /* 绝对定位，相对于 .xtx_category */
-  top: 0;
-  left: 250px;
-  /* 放置在主分类列表的右侧 */
-  width: 1000px;
-  /* 子菜单的宽度 */
-  height: 500px;
-  /* 与主分类列表同样的高度 */
-  background-color: rgba(255, 255, 255, 0.95);
-  /* 略透明的背景 */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  /* 添加一点阴影 */
-  z-index: 99;
-  /* 确保它在 banner 之上 */
-  display: none;
-  /* 默认情况下隐藏容器 */
-}
+
 
 /* 当鼠标悬停在 .xtx_category 区域时，
       我们稍后会用 JS 来将 .xtx_category_subset 变为 display: block
@@ -913,3 +915,58 @@
 }
 
 /* --- 副菜单样式结束 --- */
+/* --- 検索サジェスト (Search Suggestion) スタイル --- */
+
+/* 1. 検索ラッパーを相対配置に設定 (ポップアップの基準点) */
+.xtx_search_wrapper {
+  position: relative;
+}
+
+/* 2. サジェストボックスのスタイル (デフォルトで非表示) */
+.xtx_search_suggest {
+  display: none;
+  /* ← デフォルトで非表示 */
+  position: absolute;
+  /* 検索ボックスの高さ(common.cssで34px) + 枠線2px = 36px */
+  top: 36px;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #e4e4e4;
+  border-top: none;
+  /* 上のボーダーは不要 */
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  /* 他の要素より手前に表示 */
+}
+
+/* 3. JavaScriptによって .show クラスが付与されたら表示 */
+.xtx_search_suggest.show {
+  display: block;
+}
+
+/* 4. リストとアイテムのスタイル */
+.xtx_search_suggest ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.xtx_search_suggest li a {
+  display: block;
+  padding: 6px 10px;
+  color: #333;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+/* 5. マウスオーバー時のスタイル */
+.xtx_search_suggest li a:hover {
+  background-color: #f5f5f5;
+  color: #27BA9B;
+  /* サイトのテーマカラー */
+}
+
+/* --- 検索サジェスト (ここまで) --- */

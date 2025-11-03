@@ -108,7 +108,14 @@
           <i>2</i>
         </a>
         <div class="xtx_search_wrapper">
-          <input type="text" placeholder="検索" onclick="location.href='./search.html'">
+          <input type="text" placeholder="検索" id="searchInput">
+
+          <div class="xtx_search_suggest" id="searchSuggest">
+            <ul>
+              <li><a href="#" onclick="goToSearch(event, '')">磁器</a></li>
+            </ul>
+          </div>
+
         </div>
       </div>
     </div>
@@ -136,7 +143,7 @@
           <li>
             <a href="javascript:;">
               家電
-              <small>デジタル製品</small>
+              <small>デジタル</small>
             </a>
             <i class="sprites"></i>
           </li>
@@ -350,22 +357,22 @@
       <div class="xtx_panel_goods_1">
         <a href="javascript:;">
           <img src="./uploads/new_goods_1.jpg" alt="睿米無線吸塵器F8">
-          <span class="name">睿米 (Roidmi) コードレス掃除機 F8</span>
+          <span class="name">睿米 コードレス掃除機 F8</span>
           <span class="price"><small>￥</small>899</span>
         </a>
         <a href="javascript:;">
           <img src="./uploads/new_goods_2.jpg" alt="智能环绕3D空调">
-          <span class="name">スマート3Dサラウンドエアコン</span>
+          <span class="name">スマート3Dエアコン</span>
           <span class="price"><small>￥</small>1299</span>
         </a>
         <a href="javascript:;">
           <img src="./uploads/new_goods_3.jpg" alt="广东软软糯米煲仔饭">
-          <span class="name">広東風 もち米土鍋ごはん</span>
+          <span class="name">もち米土鍋ごはん</span>
           <span class="price"><small>￥</small>129</span>
         </a>
         <a href="javascript:;">
           <img src="./uploads/new_goods_4.jpg" alt="罗西机械智能手表">
-          <span class="name">Rossini 機械式スマートウォッチ</span>
+          <span class="name">Rossini 機械式ウォッチ</span>
           <span class="price"><small>￥</small>3399</span>
         </a>
       </div>
@@ -1469,7 +1476,56 @@
       startAutoplay();
 
     })(); // 使用 IIFE (立即执行函数) 避免变量污染全局 (★ 已翻译注释 ★: IIFE (即時実行関数) を使用してグローバル汚染を回避)
+    // --- 輪播图 (Banner) 交互逻辑 --- (★ 已翻译注释 ★: --- カルーセル (Banner) インタラクションロジック ---)
+    ; (function () {
+      // ... (既存のカルーセルコードはそのまま) ...
+    })(); // 使用 IIFE (立即执行函数) 避免变量污染全局 (★ 已翻译注释 ★: IIFE (即時実行関数) を使用してグローバル汚染を回避)
+
+
+    /* === ↓↓↓ ここから追加 ↓↓↓ === */
+
+    // --- 検索ボックス サジェスト機能 ---
+
+    // 1. 必要な要素を取得
+    const searchInput = document.getElementById('searchInput');
+    const searchSuggest = document.getElementById('searchSuggest');
+
+    // 2. 検索ボックスがクリック (フォーカス) された時のイベント
+    searchInput.addEventListener('focus', () => {
+      // サジェストボックスに 'show' クラスを追加して表示
+      searchSuggest.classList.add('show');
+    });
+
+    // 3. 検索ボックスからフォーカスが外れた時のイベント
+    searchInput.addEventListener('blur', () => {
+      // すぐに非表示にするとリンクをクリックできないため、少し遅らせる (0.2秒)
+      setTimeout(() => {
+        searchSuggest.classList.remove('show');
+      }, 200);
+    });
+
+    // 4. サジェスト (例: '茶具') をクリックした時の関数
+    //    (HTML の onclick="goToSearch(event, '茶具')" から呼び出される)
+    function goToSearch(event, term) {
+      if (event) event.preventDefault(); // リンク (href="#") のデフォルト動作をキャンセル
+
+      searchInput.value = term; // 入力欄にキーワードを設定
+      searchSuggest.classList.remove('show'); // サジェストを非表示
+
+      // 検索ページにキーワードを渡して移動
+      // (例: ./search.html?q=茶具 というURLに)
+      location.href = './search.html?q=' + encodeURIComponent(term);
+    }
+
+    // --- 検索ボックス サジェスト機能 (ここまで) ---
+
+    /* === ↑↑↑ ここまで追加 ↑↑↑ === */
   </script>
+
+</body>
+
+</html>
+</script>
 
 
 </body>
