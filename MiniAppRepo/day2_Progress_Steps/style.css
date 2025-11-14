@@ -1,0 +1,81 @@
+@import url(`#`);
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+}
+
+.progress-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 350px;
+}
+
+.container {
+  text-align: center;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 3px solid #d3d3d3;
+  transition: 0.4s ease;
+  /* 提供背景色,使文字不会贯穿线 */
+  background-color: #f1f1f1;
+}
+
+.circle.active {
+  border-color: var(--line-border-fill);
+
+}
+
+/* 这是灰线前的样式 */
+.progress-container::before {
+  background-color: var(--line-border-empty);
+  width: 100%;
+  height: 4px;
+  content: '';
+  position: absolute;
+  z-index: -1;
+  transform: translateY(-50%);
+  top: 50%
+}
+
+/* 这是蓝线 */
+.progress {
+  background-color: var(--line-border-fill);
+  width: 0%;
+  height: 4px;
+  position: absolute;
+  z-index: -1;
+  transform: translateY(-50%);
+  top: 50%;
+  transition: 0.4s ease;
+}
+
+.btn {
+  background-color: var(--line-border-fill);
+  color: #ffffff;
+  border: 0;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  background-color: var(--line-border-empty);
+  cursor: not-allowed;
+}
+
+:root {
+  --line-border-fill: #24c4f5;
+  --line-border-empty: #77747485;
+}
