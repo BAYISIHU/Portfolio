@@ -313,12 +313,12 @@
         <ul>
                               <li class="active">
                         <a href="javascript:;">
-                            <img src="./uploads/banner_1.png" alt="バナー1">
+                            <img src="./uploads/banner_1.jpg" alt="バナー1">
                           </a>
                       </li>
                               <li>
                         <a href="javascript:;">
-                            <img src="./uploads/banner_2.png" alt="バナー2">             </a>
+                            <img src="./uploads/banner_2.jpg" alt="バナー2">             </a>
                       </li>
                               <li>
                         <a href="javascript:;">
@@ -1519,7 +1519,27 @@
 
     // --- 検索ボックス サジェスト機能 (ここまで) ---
 
-    /* === ↑↑↑ ここまで追加 ↑↑↑ === */
+    // 1. '.xtx_goods_category' 内のすべての商品リスト項目 (li) を取得します
+    //    これには「生鮮食品」「ファッション」「キッチン用品」「ホーム・インテリア」が含まれます
+    const categoryProductItems = document.querySelectorAll('.xtx_goods_category .xtx_panel_goods_2 li');
+
+    // 2. 取得した各リスト項目をループ処理します
+    categoryProductItems.forEach(item => {
+      // 3. この項目が「カバー画像」ではなく「通常の商品」かを確認します
+      //    （'.img-box' クラスを持つ要素が含まれているかで判断）
+      const imgBox = item.querySelector('.img-box');
+
+      if (imgBox) {
+        // 4. 「通常の商品」の場合、その li の直下にある <a> タグ（メインリンク）を探します
+        //    :scope は、CSSセレクタの検索範囲を現在の 'item' 要素に限定します
+        const productLink = item.querySelector(':scope > a');
+
+        if (productLink) {
+          // 5. リンクの href 属性を 'product-dev.html' に設定します
+          productLink.href = './product-dev.html';
+        }
+      }
+    });
   </script>
 
 </body>
