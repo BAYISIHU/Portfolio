@@ -16,7 +16,7 @@
 #### ⭐ 注目のプロジェクト (Featured Projects)
 ** OnlineShoppingWebsite**
 * **概要:** 実装されている主な機能は：ユーザー認証,ポップアップ広告,インタラクティブなUI,レスポンシブ対応（リダイレクト）,タブ切り替え,フォーム送信（疑似）,商品画像の拡大鏡（ルーペ）,動的なページUI。
-* **リンク:** [🔗 倉庫](https://github.com/BAYISIHU/Portfolio/tree/main/ClientAuthE-Shop) | [👁️‍🗨️ Demo](https://bayisihu.github.io/Portfolio/OnlineShoppingWebsite/)
+* **リンク:** [🔗 倉庫](https://github.com/BAYISIHU/Portfolio/tree/main/OnlineShoppingWebsite) | [👁️‍🗨️ Demo](https://bayisihu.github.io/Portfolio/OnlineShoppingWebsite/)
 
 ---
 #### 🗂️ その他のプロジェクト一覧 (Other Projects List)
